@@ -2,26 +2,22 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Nor Win Campground — Family Camping in Lyons, NY",
+  title: "Willow Mill Campground — Family Camping in Rio, WI",
   description:
-    "Nor Win Campgrounds & Fruit Farm — a family-run RV park and seasonal campground in Lyons, NY since 1966.",
+    "Willow Mill Campground — a family-owned, waterfront RV park and campground in Rio, WI (Columbia County) since 1968.",
   openGraph: {
-    title: "Nor Win Campground — Family Camping in Lyons, NY",
+    title: "Willow Mill Campground — Family Camping in Rio, WI",
     description:
-      "Nor Win Campgrounds & Fruit Farm — a family-run RV park and seasonal campground in Lyons, NY since 1966.",
+      "Willow Mill Campground — a family-owned, waterfront RV park and campground in Rio, WI (Columbia County) since 1968.",
     type: "website",
-    images: [
-      "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6fa96368-3378-4024-9dd7-9e32a434754d/id-preview-e252fa82--06750eac-b6e1-4115-8223-a8f45b35e4dd.lovable.app-1779296948261.png",
-    ],
+    images: ["/images/logo.png"],
   },
   twitter: {
     card: "summary",
-    title: "Nor Win Campground — Family Camping in Lyons, NY",
+    title: "Willow Mill Campground — Family Camping in Rio, WI",
     description:
-      "Nor Win Campgrounds & Fruit Farm — a family-run RV park and seasonal campground in Lyons, NY since 1966.",
-    images: [
-      "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6fa96368-3378-4024-9dd7-9e32a434754d/id-preview-e252fa82--06750eac-b6e1-4115-8223-a8f45b35e4dd.lovable.app-1779296948261.png",
-    ],
+      "Willow Mill Campground — a family-owned, waterfront RV park and campground in Rio, WI (Columbia County) since 1968.",
+    images: ["/images/logo.png"],
   },
 };
 

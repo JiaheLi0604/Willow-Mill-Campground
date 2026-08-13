@@ -2,11 +2,10 @@ import Link from "next/link";
 import { Facebook, Phone, MapPin, ExternalLink } from "lucide-react";
 
 const logo = "/images/logo.png";
-const FACEBOOK_URL = "https://www.facebook.com/norwincampgrounds";
-const GOOGLE_PROFILE_URL =
-  "https://www.google.com/maps/place/NorWin+Campgrounds/@43.0661,-76.9834,15z/data=!4m6!3m5!1s0x89d73225598000ad:0x29bb9a7277118b57!8m2!3d43.0661!4d-76.9834!16s%2Fg%2F1ydxx7t6r";
-const ADDRESS = "2921 Pilgrimport Road, Lyons, NY 14489";
-const PHONE = "(315) 946-4436";
+const FACEBOOK_URL = "https://www.facebook.com/WillowMillCampsite/";
+const GOOGLE_PROFILE_URL = "https://maps.app.goo.gl/zfBiLvCQzLNhjaXXA";
+const ADDRESS = "N5830 County Hwy SS, Rio, WI 53960";
+const PHONE = "(920) 992-1212";
 
 const footerLinks = [
   { label: "RV Sites", href: "/accommodations/rv-sites" },
@@ -25,7 +24,7 @@ export function SiteFooter() {
       <div className="container-narrow flex flex-wrap items-center justify-between gap-6 py-10">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
-          <img src={logo} alt="Nor Win Campgrounds" className="h-24 w-auto object-contain" />
+          <img src={logo} alt="Willow Mill Campground" className="h-32 w-auto object-contain" />
         </Link>
 
         {/* Nav links */}
@@ -57,7 +56,7 @@ export function SiteFooter() {
       <div className="border-t border-white/10">
         <div className="container-narrow flex flex-wrap items-center justify-between gap-4 py-4 text-sm opacity-80">
           <a
-            href="tel:3159464436"
+            href="tel:9209921212"
             className="flex items-center gap-2 hover:opacity-100 transition-opacity"
           >
             <Phone className="h-4 w-4 flex-shrink-0" />
@@ -87,7 +86,7 @@ export function SiteFooter() {
       {/* Copyright bar */}
       <div className="border-t border-white/10">
         <div className="container-narrow flex flex-wrap items-center justify-between gap-3 py-4 text-xs opacity-60">
-          <span>© {new Date().getFullYear()} Nor Win Campground. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Willow Mill Campground. All rights reserved.</span>
           <div className="flex items-center gap-4">
             <Link href="/privacy-policy" className="hover:opacity-100 transition-opacity">Privacy Policy</Link>
             <Link href="/terms-of-service" className="hover:opacity-100 transition-opacity">Terms of Service</Link>

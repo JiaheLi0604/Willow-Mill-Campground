@@ -18,8 +18,8 @@ const badminton = "/images/gallery/badminton_full.jpg";
 const horseshoes = "/images/gallery/horseshoes_full.jpg";
 
 export const metadata: Metadata = {
-  title: "RV Sites — Nor Win Campground",
-  description: "Spacious, shaded RV sites with water and electric hookups at Nor Win Campground in Lyons, NY.",
+  title: "RV Sites — Willow Mill Campground",
+  description: "Spacious, shaded RV sites with water and electric hookups at Willow Mill Campground in Rio, WI.",
 };
 
 const features = [
@@ -32,14 +32,14 @@ const features = [
 ];
 
 const gallery = [
-  { src: rvsite, alt: "RV site at Nor Win Campground" },
-  { src: campers, alt: "RV campers at Nor Win" },
+  { src: rvsite, alt: "RV site at Willow Mill Campground" },
+  { src: campers, alt: "RV campers at Willow Mill" },
   { src: office, alt: "Park office" },
-  { src: sunset, alt: "Sunset over Nor Win Campground" },
-  { src: pool, alt: "Swimming pool at Nor Win" },
-  { src: playground, alt: "Playground at Nor Win" },
-  { src: badminton, alt: "Badminton court at Nor Win" },
-  { src: horseshoes, alt: "Horseshoe pit at Nor Win" },
+  { src: sunset, alt: "Sunset over Willow Mill Campground" },
+  { src: pool, alt: "Swimming pool at Willow Mill" },
+  { src: playground, alt: "Playground at Willow Mill" },
+  { src: badminton, alt: "Badminton court at Willow Mill" },
+  { src: horseshoes, alt: "Horseshoe pit at Willow Mill" },
 ];
 
 export default function RvSites() {
@@ -53,7 +53,7 @@ export default function RvSites() {
         <div className="container-narrow grid gap-12 md:grid-cols-2 items-center">
           <img
             src={rvsite}
-            alt="RV site at Nor Win Campground"
+            alt="RV site at Willow Mill Campground"
             className="rounded-lg w-full object-cover aspect-[4/3]"
             loading="lazy"
           />
@@ -68,7 +68,7 @@ export default function RvSites() {
               to see everything included with your stay. We&rsquo;re also a pet-friendly park, so leashed dogs are always welcome.
             </p>
             <a
-              href="https://www.campspot.com/book/nor-win-campground"
+              href="https://www.campspot.com/book/willow-mill-campground"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary inline-block px-10 py-4 text-base tracking-wider"

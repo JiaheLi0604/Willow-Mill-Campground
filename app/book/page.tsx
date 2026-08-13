@@ -45,10 +45,10 @@ export default function Book() {
         <div className="w-full px-8 pt-6 flex items-start justify-between">
           <Link href="/" className="block w-[120px]">
             <div className="bg-white p-2 rounded-sm shadow-md">
-              <img src={logo} alt="Nor Win Campground" className="h-20 w-20 mx-auto" />
+              <img src={logo} alt="Willow Mill Campground" className="h-20 w-20 mx-auto" />
             </div>
             <div className="mt-1 bg-[#2f7a3a] text-white text-[10px] font-bold tracking-wide py-2 px-2 text-center leading-tight">
-              NORWIN CAMPGROUND<br />LYONS, NY
+              WILLOW MILL CAMPGROUND<br />RIO, WI
             </div>
           </Link>
 
@@ -113,7 +113,7 @@ export default function Book() {
         </div>
 
         <div className="w-full py-6 text-center text-xs text-white/70">
-          © {new Date().getFullYear()} Nor Win Campground · Lyons, NY · (315) 946-4436
+          © {new Date().getFullYear()} Willow Mill Campground · Rio, WI · (920) 992-1212
         </div>
       </div>
     </div>

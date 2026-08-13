@@ -7,15 +7,12 @@ import { ReviewsSlider } from "@/components/home/ReviewsSlider";
 import { GalleryLightbox, type GalleryPhoto } from "@/components/home/GalleryLightbox";
 import { GoogleIcon } from "@/components/home/GoogleIcon";
 
-const hero = "/images/hero.jpg";
+const hero = "/images/hero.webp";
 const pool = "/images/pool.jpg";
 const playground = "/images/playground.jpg";
 const orchard = "/images/dog.jpg";
 const parkHero = "/images/park-hero.jpg";
-const basketballImg = "/images/basketball.jpg";
-const volleyballImg = "/images/volleyball.jpg";
 const longTermHero = "/images/rv-site-new.jpg";
-const store = "/images/gallery/park_office_full.jpg";
 const rvsite = "/images/rvsite.jpg";
 const gameroom = "/images/gameroom.jpg";
 const minigolf = "/images/minigolf.jpg";
@@ -25,38 +22,40 @@ const sunset = "/images/gallery/office_sunset_full.jpg";
 const campers = "/images/gallery/park_campers_full.jpg";
 const swimmingPool = "/images/gallery/swimming_pool_full.jpg";
 const playgroundFull = "/images/gallery/playground_full.jpg";
+const walkingTrails = "/images/view.jpg";
+const kayakRentals = "/images/pond.jpg";
 
-const ADDRESS = "2921 Pilgrimport Road, Lyons, NY 14489";
-const PHONE_DISPLAY = "(315) 946-4436";
-const PHONE_TEL = "3159464436";
-const BOOK_URL = "https://www.campspot.com/book/nor-win-campground";
+const ADDRESS = "N5830 County Hwy SS, Rio, WI 53960";
+const PHONE_DISPLAY = "(920) 992-1212";
+const PHONE_TEL = "9209921212";
+const BOOK_URL = "https://www.campspot.com/book/willow-mill-campground";
 const MAP_EMBED = `https://www.google.com/maps?q=${encodeURIComponent(ADDRESS)}&output=embed`;
 const DIRECTIONS_URL = `https://maps.google.com/?q=${encodeURIComponent(ADDRESS)}`;
 
 const galleryPhotos: GalleryPhoto[] = [
-  { src: campers, alt: "Campers enjoying Nor Win Campground" },
-  { src: "/images/sign.jpg", alt: "Happy Campers Welcome sign at Nor Win" },
-  { src: swimmingPool, alt: "Swimming pool at Nor Win" },
-  { src: playgroundFull, alt: "Playground at Nor Win" },
-  { src: rvsite, alt: "RV site at Nor Win" },
-  { src: badminton, alt: "Badminton court at Nor Win" },
-  { src: horseshoes, alt: "Horseshoe pits at Nor Win" },
-  { src: orchard, alt: "Orchard at Nor Win Fruit Farm" },
+  { src: campers, alt: "Campers enjoying Willow Mill Campground" },
+  { src: "/images/sign.jpg", alt: "Happy Campers Welcome sign at Willow Mill" },
+  { src: swimmingPool, alt: "Swimming pool at Willow Mill" },
+  { src: playgroundFull, alt: "Playground at Willow Mill" },
+  { src: rvsite, alt: "RV site at Willow Mill" },
+  { src: badminton, alt: "Badminton court at Willow Mill" },
+  { src: horseshoes, alt: "Rec hall at Willow Mill" },
+  { src: orchard, alt: "Dog-friendly camping at Willow Mill" },
 ];
 
 export default async function Home() {
   const reviews = await getGoogleReviews();
 
-  const stat2 =
+  const stat1 =
     reviews.total > 0
-      ? { value: String(reviews.total), label: "Google Reviews" }
-      : { value: "1966", label: "Established" };
+      ? { value: String(reviews.total), label: "5-Star Reviews" }
+      : { value: "1968", label: "Established" };
 
   return (
     <Layout>
       {/* Hero — left-aligned, Google rating pill, headline, CTA, stat row */}
       <section className="relative h-[82vh] min-h-[600px] w-full overflow-hidden">
-        <img src={hero} alt="Nor Win Campground" className="absolute inset-0 h-full w-full object-cover" width={1920} height={1280} />
+        <img src={hero} alt="Willow Mill Campground" className="absolute inset-0 h-full w-full object-cover" width={1920} height={1280} />
         <div className="absolute inset-0 bg-black/35" />
         <div className="relative z-10 flex h-full flex-col justify-center text-white px-6">
           <div className="container-narrow w-full">
@@ -78,35 +77,35 @@ export default async function Home() {
                 </div>
                 <span className="font-semibold">{reviews.rating.toFixed(1)}</span>
                 <span className="text-[var(--border)]">|</span>
-                <span>{reviews.total} Reviews</span>
+                <span>{reviews.total} 5-Star Reviews</span>
               </a>
             )}
 
             <h1 className="font-sans text-5xl md:text-7xl max-w-3xl leading-[1.05] font-light">
-              Nor Win Campground
+              Willow Mill Campground
             </h1>
 
             <p className="mt-6 max-w-xl text-base md:text-lg opacity-95 leading-relaxed">
-              Welcome to Nor Win Campground — a campground in Lyons, New York, and one of Wayne County&rsquo;s best-kept secrets since 1966.
+              Welcome to Willow Mill Campsite - a family-oriented campground on the water in Rio, Wisconsin, and one of Columbia County&rsquo;s best-kept secrets since 1968.
             </p>
 
             <a
               href={BOOK_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center justify-center bg-[var(--forest)] text-white rounded-lg px-7 py-3.5 text-sm font-semibold hover:bg-[var(--forest-deep)] transition-colors"
+              className="mt-8 inline-flex items-center justify-center bg-[var(--book-green)] text-white rounded-lg px-7 py-3.5 text-sm font-semibold hover:bg-[var(--book-green-deep)] transition-colors"
             >
               Reserve Your Site
             </a>
 
             <div className="mt-16 flex items-center gap-12 md:gap-16">
               <div>
-                <p className="text-4xl md:text-5xl font-bold">200+</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.2em] opacity-85">RV Sites</p>
+                <p className="text-4xl md:text-5xl font-bold">{stat1.value}</p>
+                <p className="mt-1 text-xs uppercase tracking-[0.2em] opacity-85">{stat1.label}</p>
               </div>
               <div>
-                <p className="text-4xl md:text-5xl font-bold">{stat2.value}</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.2em] opacity-85">{stat2.label}</p>
+                <p className="text-4xl md:text-5xl font-bold">211</p>
+                <p className="mt-1 text-xs uppercase tracking-[0.2em] opacity-85">Sites</p>
               </div>
             </div>
           </div>
@@ -120,21 +119,14 @@ export default async function Home() {
       <section className="bg-white py-20">
         <div className="container-narrow max-w-4xl">
           <h2 className="font-sans text-3xl md:text-4xl font-medium text-[var(--forest-deep)] mb-8">
-            Nor Win Campground in Lyons, NY
+            Willow Mill Campground in Rio, WI
           </h2>
           <div className="space-y-6 text-[var(--foreground)] leading-relaxed">
             <p>
-              Welcome to Nor Win Campground — now under new ownership — a campground in Lyons, New York, and one of Wayne County&rsquo;s best-kept secrets since 1966. Tucked along Pilgrimport Road, our property features spacious, shaded sites with fire rings and picnic tables available upon request, plus a seasonal pool, playground, pavilion, and a peaceful on-site pond. The camp store carries ice cream, drinks, candy, firewood, ice, RV supplies, and propane refills, while practical amenities include public bathrooms with private showers and a dump station. We&rsquo;re open May 1 through October 1, so there&rsquo;s plenty of season to enjoy. Head to our{" "}
-              <Link href="/amenities" className="underline text-[var(--forest-deep)] font-medium">amenities</Link> page for the full picture of what you can expect during your stay.
+              Welcome to Willow Mill Campsite, a family-oriented, waterfront campsite in Rio, Wisconsin, and a Columbia County favorite since 1968. Set along County Highway SS, our lakefront property features spacious, shaded campsites with picnic tables, and relaxing water views. Guests can enjoy a seasonal pool, kayak rentals, mini golf, a game room, pavilion, and a pet-friendly dog park. The camp store offers firewood, ice, RV supplies, propane refills, snacks, and frozen foods, while practical amenities include laundry facilities, private bathrooms, and free WiFi near the store. Open through October 15, Willow Mill is a great place to relax, unwind, and enjoy the outdoors.
             </p>
             <p>
-              Located near some of New York&rsquo;s top destinations, Nor Win makes an excellent home base for exploring the area. Rochester, about 35 miles west, is home to the{" "}
-              <Link href="/about/nearby" className="underline text-[var(--forest-deep)] font-medium">Strong National Museum of Play</Link>, the{" "}
-              <Link href="/about/nearby" className="underline text-[var(--forest-deep)] font-medium">Public Market</Link>, and the{" "}
-              <Link href="/about/nearby" className="underline text-[var(--forest-deep)] font-medium">George Eastman Museum</Link>. The{" "}
-              <Link href="/about/nearby" className="underline text-[var(--forest-deep)] font-medium">Finger Lakes wine trails</Link> along Seneca, Cayuga, and Keuka Lakes are about 30 miles south, with more than 100 wineries and{" "}
-              <Link href="/about/nearby" className="underline text-[var(--forest-deep)] font-medium">Watkins Glen State Park</Link>.{" "}
-              <Link href="/about/nearby" className="underline text-[var(--forest-deep)] font-medium">Sodus Bay</Link> on Lake Ontario is a quick trip north for the historic lighthouse and fishing charters. Whether you&rsquo;re planning a quiet camping retreat or a fun-filled family getaway, Nor Win offers the perfect balance of comfort, recreation, and convenience.
+              Located near some of Wisconsin&rsquo;s top destinations, Willow Mill makes an excellent home base for exploring the area. Madison, about 30 miles southwest, offers attractions such as Henry Vilas Zoo, Capitol Square, State Street, and Lake Mendota. Wisconsin Dells, roughly 35 miles north, is famous for its waterparks, river tours, and family attractions. Closer to camp, Chandler Park provides additional outdoor recreation opportunities. Whether you&rsquo;re planning a quiet camping retreat or a fun-filled family getaway, Willow Mill Campsite offers the perfect balance of comfort, recreation, and convenience.
             </p>
           </div>
         </div>
@@ -158,7 +150,7 @@ export default async function Home() {
                 img: longTermHero,
                 icon: CalendarDays,
                 title: "Long Term RV Sites",
-                text: "Nor Win has been a seasonal home for families since 1966, and our long term sites reflect that. Claim your spot for the season and spend your summers at Nor Win in Wayne County.",
+                text: "Willow Mill has been a seasonal home for families since 1968, and our long term sites reflect that. Claim your spot for the season and spend your summers at Willow Mill in Columbia County.",
                 to: "/about/long-term-rv" as const,
               },
             ].map((c) => (
@@ -191,12 +183,13 @@ export default async function Home() {
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { img: pool, label: "Swimming Pool" },
+              { img: walkingTrails, label: "Walking Trails" },
               { img: playground, label: "Playground" },
-              { img: store, label: "Camp Store" },
-              { img: horseshoes, label: "Rec Hall" },
-              { img: volleyballImg, label: "Volleyball" },
-              { img: basketballImg, label: "Basketball" },
+              { img: orchard, label: "Dog Park" },
+              { img: minigolf, label: "Mini Golf" },
+              { img: pool, label: "Swimming Pool" },
+              { img: kayakRentals, label: "Kayak Rentals" },
+              { img: gameroom, label: "Game Room" },
             ].map((a) => (
               <div key={a.label} className="rounded-xl overflow-hidden shadow-sm">
                 <div className="aspect-[4/3] overflow-hidden">
@@ -223,7 +216,7 @@ export default async function Home() {
           <p className="text-lg text-white">Not sure which site is right for you? Give us a call.</p>
           <a
             href={`tel:${PHONE_TEL}`}
-            className="inline-flex items-center gap-2 bg-[var(--forest)] text-white rounded-lg px-6 py-3 text-sm font-semibold hover:bg-[var(--sage)] hover:text-[var(--forest-deep)] transition-colors whitespace-nowrap"
+            className="inline-flex items-center gap-2 bg-[var(--book-green)] text-white rounded-lg px-6 py-3 text-sm font-semibold hover:bg-[var(--book-green-deep)] transition-colors whitespace-nowrap"
           >
             <Phone className="h-4 w-4" /> {PHONE_DISPLAY}
           </a>
@@ -256,7 +249,7 @@ export default async function Home() {
           <div className="relative w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-xl shadow-md">
             <iframe
               src={MAP_EMBED}
-              title="Nor Win Campground location"
+              title="Willow Mill Campground location"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="absolute inset-0 h-full w-full border-0"
@@ -291,7 +284,7 @@ export default async function Home() {
       <section className="bg-[var(--forest-deep)] py-20">
         <div className="container-narrow text-center">
           <h2 className="font-serif text-3xl md:text-5xl font-light text-white mb-4 whitespace-nowrap">
-            Ready to experience the top campground in Lyons, NY?
+            Ready to experience the top RV park in Rio, WI?
           </h2>
           <p className="text-white/80 max-w-xl mx-auto">
             Whether you are booking a weekend getaway or settling in for longer, we would love to have you.
@@ -301,13 +294,13 @@ export default async function Home() {
               href={BOOK_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[var(--forest)] text-white rounded-lg px-8 py-3.5 text-sm font-semibold hover:bg-[var(--sage)] hover:text-[var(--forest-deep)] transition-colors"
+              className="inline-flex items-center justify-center bg-[var(--book-green)] text-white rounded-lg px-8 py-3.5 text-sm font-semibold hover:bg-[var(--book-green-deep)] transition-colors"
             >
               Book Now
             </a>
             <a
               href={`tel:${PHONE_TEL}`}
-              className="inline-flex items-center justify-center gap-2 border border-white/40 text-white rounded-lg px-8 py-3.5 text-sm font-semibold hover:bg-white/10 transition-colors"
+              className="inline-flex items-center justify-center gap-2 border border-[var(--book-green)] text-white rounded-lg px-8 py-3.5 text-sm font-semibold hover:bg-white/10 transition-colors"
             >
               <Phone className="h-4 w-4" /> {PHONE_DISPLAY}
             </a>

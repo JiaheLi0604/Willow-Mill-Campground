@@ -18,8 +18,8 @@ const badminton = "/images/spot.jpg";
 const horseshoes = "/images/gallery/horseshoes_full.jpg";
 
 export const metadata: Metadata = {
-  title: "Long Term RV Sites — Nor Win Campground",
-  description: "Seasonal long term RV sites at Nor Win Campground in Lyons, NY — fully hooked up, shaded, and family-run since 1966.",
+  title: "Long Term RV Sites — Willow Mill Campground",
+  description: "Seasonal long term RV sites at Willow Mill Campground in Rio, WI — fully hooked up, shaded, and family-run since 1968.",
 };
 
 const features = [
@@ -32,14 +32,14 @@ const features = [
 ];
 
 const gallery = [
-  { src: orchard, alt: "Long term site at Nor Win Campground" },
-  { src: campers, alt: "Long term campers at Nor Win" },
+  { src: orchard, alt: "Long term site at Willow Mill Campground" },
+  { src: campers, alt: "Long term campers at Willow Mill" },
   { src: office, alt: "Park office" },
-  { src: sunset, alt: "Sunset over Nor Win Campground" },
-  { src: pool, alt: "Swimming pool at Nor Win" },
-  { src: playground, alt: "Playground at Nor Win" },
-  { src: badminton, alt: "Badminton court at Nor Win" },
-  { src: horseshoes, alt: "Horseshoe pit at Nor Win" },
+  { src: sunset, alt: "Sunset over Willow Mill Campground" },
+  { src: pool, alt: "Swimming pool at Willow Mill" },
+  { src: playground, alt: "Playground at Willow Mill" },
+  { src: badminton, alt: "Badminton court at Willow Mill" },
+  { src: horseshoes, alt: "Horseshoe pit at Willow Mill" },
 ];
 
 export default function LongTerm() {
@@ -53,14 +53,14 @@ export default function LongTerm() {
         <div className="container-narrow grid gap-12 md:grid-cols-2 items-center">
           <img
             src={orchard}
-            alt="Long term site at Nor Win Campground"
+            alt="Long term site at Willow Mill Campground"
             className="rounded-lg w-full object-cover aspect-[4/3]"
             loading="lazy"
           />
           <div>
-            <h2 className="text-4xl mb-6">A Seasonal Home Since 1966</h2>
+            <h2 className="text-4xl mb-6">A Seasonal Home Since 1968</h2>
             <p className="text-[var(--muted-foreground)] leading-relaxed mb-6">
-              Nor Win Campground has been a seasonal home for campers in Lyons, New York since 1966. Our long term sites are large, shaded, and fully hooked up with water and electric (sewer on select sites), set between Rochester and Syracuse. If you&rsquo;re looking for a seasonal spot that feels like a community, this is it.
+              Willow Mill Campground has been a seasonal home for campers in Rio, Wisconsin since 1968. Our long term sites are large, shaded, and fully hooked up with water and electric (sewer on select sites), set between Madison and Wisconsin Dells. If you&rsquo;re looking for a seasonal spot that feels like a community, this is it.
             </p>
             <p className="text-[var(--muted-foreground)] leading-relaxed mb-8">
               Public bathrooms with private showers, a dump station, and propane refills keep the day-to-day running smoothly, and the camp store carries RV supplies, firewood, ice, ice cream, drinks, and candy. View our full list of{" "}
@@ -68,7 +68,7 @@ export default function LongTerm() {
               — and yes, leashed dogs are always welcome.
             </p>
             <a
-              href="https://www.campspot.com/book/nor-win-campground"
+              href="https://www.campspot.com/book/willow-mill-campground"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary inline-block px-10 py-4 text-base tracking-wider"

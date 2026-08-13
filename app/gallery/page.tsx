@@ -5,24 +5,24 @@ import { Layout } from "@/components/Layout";
 import { Phone, X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const heroImg = "/images/view5.jpg";
-const BOOK_URL = "https://www.campspot.com/book/nor-win-campground";
+const BOOK_URL = "https://www.campspot.com/book/willow-mill-campground";
 
 const IMAGES = [
-  { src: "/images/gallery/park_campers_full.jpg", alt: "Campers at Nor Win Campground" },
-  { src: "/images/rv4.jpg", alt: "RV site at Nor Win" },
-  { src: "/images/rv3.jpg", alt: "RV site at Nor Win" },
+  { src: "/images/gallery/park_campers_full.jpg", alt: "Campers at Willow Mill Campground" },
+  { src: "/images/rv4.jpg", alt: "RV site at Willow Mill" },
+  { src: "/images/rv3.jpg", alt: "RV site at Willow Mill" },
   { src: "/images/gallery/park_office_full.jpg", alt: "Park office" },
-  { src: "/images/dog.jpg", alt: "Pet friendly at Nor Win" },
-  { src: "/images/spot.jpg", alt: "RV spot at Nor Win" },
+  { src: "/images/dog.jpg", alt: "Pet friendly at Willow Mill" },
+  { src: "/images/spot.jpg", alt: "RV spot at Willow Mill" },
   { src: "/images/gallery/horseshoes_full.jpg", alt: "Horseshoes" },
-  { src: "/images/rv.jpg", alt: "RV site at Nor Win" },
-  { src: "/images/site.jpg", alt: "RV site at Nor Win" },
-  { src: "/images/view.jpg", alt: "Pond view at Nor Win" },
-  { src: "/images/front.jpg", alt: "Nor Win entrance sign" },
+  { src: "/images/rv.jpg", alt: "RV site at Willow Mill" },
+  { src: "/images/site.jpg", alt: "RV site at Willow Mill" },
+  { src: "/images/view.jpg", alt: "Pond view at Willow Mill" },
+  { src: "/images/front.jpg", alt: "Willow Mill entrance sign" },
   { src: "/images/rvsite.jpg", alt: "RV site" },
-  { src: "/images/view3.jpg", alt: "Park view at Nor Win" },
-  { src: "/images/rv-site-new.jpg", alt: "RV site at Nor Win" },
-  { src: "/images/bathroom.jpg", alt: "Bathrooms & Showers at Nor Win" },
+  { src: "/images/view3.jpg", alt: "Park view at Willow Mill" },
+  { src: "/images/rv-site-new.jpg", alt: "RV site at Willow Mill" },
+  { src: "/images/bathroom.jpg", alt: "Bathrooms & Showers at Willow Mill" },
   { src: "/images/park-hero.jpg", alt: "Park view" },
 ];
 
@@ -180,18 +180,18 @@ export default function Gallery() {
             href={BOOK_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-lg bg-[var(--forest)] text-white font-semibold hover:brightness-110 transition-all"
+            className="inline-flex items-center justify-center rounded-lg bg-[var(--book-green)] text-white font-semibold hover:brightness-110 transition-all"
             style={{ padding: "11px 35px" }}
           >
             Book Now
           </a>
           <a
-            href="tel:3159464436"
+            href="tel:9209921212"
             className="inline-flex items-center gap-2 text-[#faf8f5] font-semibold hover:bg-white/10 transition-colors"
             style={{ padding: "10px 23px", border: "1px solid #ddd7c9", borderRadius: "8px" }}
           >
             <Phone className="h-4 w-4" />
-            (315) 946-4436
+            (920) 992-1212
           </a>
         </div>
       </section>

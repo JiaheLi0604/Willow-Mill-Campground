@@ -5,7 +5,7 @@ import { GoogleIcon, hashColor } from "./GoogleIcon";
 /**
  * Reviews section styled after Willow Mill's homepage: a Google-badged
  * label, an overall rating summary, and an auto-scrolling row of
- * review cards with avatar initials. Uses Nor Win's live Google review
+ * review cards with avatar initials. Uses Willow Mill's live Google review
  * data only — falls back to a simple "see reviews" link if no reviews
  * are available, rather than inventing testimonials.
  */

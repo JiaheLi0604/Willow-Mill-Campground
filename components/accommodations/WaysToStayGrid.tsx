@@ -17,7 +17,7 @@ const cards = [
     href: "/about/long-term-rv",
     image: longTerm,
     description:
-      "Nor Win has been a seasonal home for families since 1966. Claim your spot for the season and spend your summers in the heart of New York's Finger Lakes region.",
+      "Willow Mill has been a seasonal home for families since 1968. Claim your spot for the season and spend your summers in the heart of Wisconsin's lake country.",
   },
 ];
 

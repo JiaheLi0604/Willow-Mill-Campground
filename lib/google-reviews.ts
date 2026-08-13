@@ -1,4 +1,4 @@
-const PLACE_ID = "ChIJrVAAWyUy14kRV7gR93iyuyk";
+const PLACE_ID = "ChIJxdoGcXXCBogR3FGdPRUDmMI";
 
 export type GoogleReview = {
   author: string;

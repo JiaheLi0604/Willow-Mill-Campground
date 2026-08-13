@@ -106,7 +106,7 @@ export function NearbyCityPage(props: NearbyCityPageProps) {
         <div className="container-narrow grid gap-12 md:grid-cols-2 items-center">
           <div className="aspect-[4/3] w-full overflow-hidden rounded-sm border border-[var(--border)]">
             <iframe
-              title={`Directions from Nor Win Campground to ${props.cityName}`}
+              title={`Directions from Willow Mill Campground to ${props.cityName}`}
               src={props.mapsEmbedUrl}
               className="h-full w-full"
               loading="lazy"
@@ -122,7 +122,7 @@ export function NearbyCityPage(props: NearbyCityPageProps) {
               <Link href="/accommodations/rv-sites" className="underline text-[var(--forest-deep)]">
                 full hookup RV spot
               </Link>{" "}
-              today and experience the best of the Finger Lakes region.
+              today and experience the best of south-central Wisconsin.
             </p>
             <Link
               href="/about/nearby"

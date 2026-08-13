@@ -14,7 +14,7 @@ import {
 const heroImg       = "/images/pond.jpg";
 const poolImg       = "/images/pool.jpg";
 const playImg       = "/images/playground.jpg";
-const orchardImg    = "/images/orchard.jpg";
+const dogParkImg    = "/images/dog.jpg";
 const minigolfImg   = "/images/minigolf.jpg";
 const gameImg       = "/images/gameroom.jpg";
 const rvsiteImg     = "/images/rvsite.jpg";
@@ -23,9 +23,9 @@ const badmintonImg  = "/images/gallery/badminton_full.jpg";
 const promoImg      = "/images/front.jpg";
 
 export const metadata: Metadata = {
-  title: "Amenities — Nor Win Campground",
+  title: "Amenities — Willow Mill Campground",
   description:
-    "Full list of amenities at Nor Win Campground in Lyons, NY — pool, playground, volleyball, basketball, horseshoes, camp store, and more.",
+    "Full list of amenities at Willow Mill Campground in Rio, WI — pool, playground, mini golf, game room, dog park, camp store, and more.",
 };
 
 const parkHeroImg   = "/images/park-hero.jpg";
@@ -36,6 +36,9 @@ const heroImgAlt    = "/images/hero.jpg";
 const recreationCards = [
   { img: poolImg,       title: "Swimming Pool" },
   { img: playImg,       title: "Playground" },
+  { img: minigolfImg,   title: "Mini Golf" },
+  { img: dogParkImg,    title: "Dog Park" },
+  { img: gameImg,       title: "Game Room" },
   { img: horseshoesImg, title: "Rec Hall" },
 ];
 
@@ -50,8 +53,9 @@ const convenienceItems = [
 
 const outdoorCards = [
   { img: rvsiteImg,     title: "Full Hookup RV Sites" },
+  { img: "/images/view.jpg", title: "Walking Trails" },
+  { img: "/images/pond.jpg", title: "Kayak Rentals" },
   { img: volleyballImg, title: "Volleyball" },
-  { img: "/images/pond.jpg", title: "Fishing" },
   { img: basketballImg, title: "Basketball" },
 ];
 
@@ -161,7 +165,7 @@ export default function Amenities() {
             <div className="overflow-hidden rounded-lg">
               <img
                 src={promoImg}
-                alt="Campers enjoying Nor Win Campground"
+                alt="Campers enjoying Willow Mill Campground"
                 className="w-full aspect-[4/3] object-cover"
                 loading="lazy"
               />
@@ -176,10 +180,10 @@ export default function Amenities() {
                 See Why We&rsquo;re the Area&rsquo;s Top-Rated Park
               </h3>
               <p className="text-white/75 leading-relaxed mb-6">
-                Nestled along the Erie Canal in Lyons, NY, Nor Win Campground has
-                been welcoming families for generations. With a full slate of
-                on-site amenities and warm, attentive staff, guests keep coming
-                back season after season.
+                Nestled along the Jennings Trout Stream in Rio, WI, Willow Mill
+                Campground has been welcoming families since 1968. With a full
+                slate of on-site amenities and warm, attentive staff, guests
+                keep coming back season after season.
               </p>
               <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 mb-7">
                 <span className="flex gap-0.5">
@@ -191,9 +195,7 @@ export default function Amenities() {
               </div>
               <div>
                 <a
-                  href="https://www.campspot.com/book/nor-win-campground"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="https://www.campspot.com/book/willow-mill-campground"
                   className="inline-flex items-center justify-center rounded-lg bg-[var(--forest)] text-white px-8 py-3 text-sm font-semibold hover:brightness-110 transition-all"
                 >
                   Book Your Stay
@@ -211,30 +213,28 @@ export default function Amenities() {
       >
         <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
           <h2 className="font-serif text-4xl md:text-5xl text-[#221711] mb-4">
-            Ready to Experience Nor Win?
+            Ready to Experience Willow Mill?
           </h2>
           <p
             className="text-[18px] text-[#6d6059] leading-relaxed mb-8 mx-auto"
             style={{ maxWidth: "530px" }}
           >
-            Book your stay at Nor Win Campground and discover everything that
-            makes us Wayne County&rsquo;s favorite family getaway.
+            Book your stay at Willow Mill Campground and discover everything
+            that makes us Columbia County&rsquo;s favorite family getaway.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
-              href="https://www.campspot.com/book/nor-win-campground"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-lg bg-[var(--forest)] text-white px-8 py-3 text-sm font-semibold hover:brightness-110 transition-all"
+              href="https://www.campspot.com/book/willow-mill-campground"
+              className="inline-flex items-center justify-center rounded-lg bg-[var(--book-green)] text-white px-8 py-3 text-sm font-semibold hover:brightness-110 transition-all"
             >
               Book Now
             </a>
             <a
-              href="tel:3159464436"
+              href="tel:9209921212"
               className="inline-flex items-center gap-2 rounded-lg border border-[#ddd7c9] text-[#221711] px-8 py-3 text-sm font-semibold hover:bg-[#ddd7c9]/40 transition-colors"
             >
               <Phone className="h-4 w-4" />
-              (315) 946-4436
+              (920) 992-1212
             </a>
           </div>
         </div>

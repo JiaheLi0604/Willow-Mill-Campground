@@ -113,9 +113,9 @@ function Results() {
       <header className="bg-white border-b">
         <div className="container-narrow flex items-center justify-between py-4">
           <Link href="/" className="flex items-center gap-3">
-            <img src={logo} alt="Nor Win Campground" className="h-12 w-12" />
+            <img src={logo} alt="Willow Mill Campground" className="h-12 w-12" />
             <div className="bg-[var(--forest)] text-[var(--cream)] text-xs font-semibold px-3 py-2 rounded">
-              NORWIN CAMPGROUND<br />LYONS, NY
+              WILLOW MILL CAMPGROUND<br />RIO, WI
             </div>
           </Link>
           <Link href="/book" className="text-sm text-[var(--forest)] hover:underline">← New Search</Link>
@@ -202,7 +202,7 @@ function Results() {
             <div className="bg-white rounded-lg p-5 shadow-sm">
               <h3 className="text-sm font-bold mb-4">Need help?</h3>
               <p className="text-xs text-[var(--muted-foreground)] mb-3">Call the office to confirm seasonal availability or special requests.</p>
-              <a href="tel:3159464436" className="text-sm text-[var(--forest)] font-semibold">(315) 946-4436</a>
+              <a href="tel:9209921212" className="text-sm text-[var(--forest)] font-semibold">(920) 992-1212</a>
             </div>
           </aside>
 
@@ -227,7 +227,7 @@ function Results() {
 
       <footer className="bg-[var(--forest-deep)] text-[var(--cream)] py-8 mt-12">
         <div className="container-narrow text-center text-sm opacity-80">
-          © {new Date().getFullYear()} Nor Win Campground · 2921 Pilgrimport Road, Lyons, NY 14489
+          © {new Date().getFullYear()} Willow Mill Campground · N5830 County Hwy SS, Rio, WI 53960
         </div>
       </footer>
     </div>

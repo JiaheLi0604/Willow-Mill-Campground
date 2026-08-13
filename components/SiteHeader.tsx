@@ -81,15 +81,15 @@ export function SiteHeader() {
       <div className="bg-[var(--forest-deep)] text-white text-xs">
         <div className="container-narrow flex items-center justify-end gap-6 py-2">
           <a
-            href="https://maps.google.com/?q=2921+Pilgrimport+Road+Lyons+NY+14489"
+            href="https://maps.google.com/?q=N5830+County+Hwy+SS+Rio+WI+53960"
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-1.5 hover:text-[var(--sage)]"
           >
             <MapPin className="h-3 w-3" /> Get Directions
           </a>
-          <a href="tel:3159464436" className="flex items-center gap-1.5 hover:text-[var(--sage)]">
-            <Phone className="h-3 w-3" /> (315) 946-4436
+          <a href="tel:9209921212" className="flex items-center gap-1.5 hover:text-[var(--sage)]">
+            <Phone className="h-3 w-3" /> (920) 992-1212
           </a>
         </div>
       </div>
@@ -98,7 +98,7 @@ export function SiteHeader() {
       <div className="bg-white shadow-sm">
         <div className="container-narrow flex items-center justify-between py-3">
           <Link href="/" className="flex items-center">
-            <img src={logo} alt="Nor Win Campgrounds logo" className="h-16 w-auto object-contain" />
+            <img src={logo} alt="Willow Mill Campground logo" className="h-24 w-auto object-contain" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
@@ -109,10 +109,10 @@ export function SiteHeader() {
 
           <div className="hidden lg:block">
             <a
-              href="https://www.campspot.com/book/nor-win-campground"
+              href="https://www.campspot.com/book/willow-mill-campground"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-[var(--forest)] px-6 py-2.5 text-sm font-semibold text-white hover:bg-[var(--forest-deep)] transition-colors"
+              className="inline-flex items-center justify-center rounded-full bg-[var(--book-green)] px-6 py-2.5 text-sm font-semibold text-white hover:bg-[var(--book-green-deep)] transition-colors"
             >
               Book Now
             </a>
@@ -136,11 +136,11 @@ export function SiteHeader() {
               </Link>
             ))}
             <a
-              href="https://www.campspot.com/book/nor-win-campground"
+              href="https://www.campspot.com/book/willow-mill-campground"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="inline-flex w-full items-center justify-center rounded-full bg-[var(--forest)] px-6 py-2.5 text-sm font-semibold text-white"
+              className="inline-flex w-full items-center justify-center rounded-full bg-[var(--book-green)] px-6 py-2.5 text-sm font-semibold text-white"
             >
               Book Now
             </a>

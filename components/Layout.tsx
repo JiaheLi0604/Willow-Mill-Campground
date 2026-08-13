@@ -29,7 +29,7 @@ export function PageHero({ title, subtitle, image }: { title: string; subtitle?:
   return (
     <section className="bg-[var(--forest)] py-20 text-center text-[var(--cream)]">
       <div className="container-narrow">
-        <p className="text-sm uppercase tracking-[0.3em] opacity-70">{subtitle ?? "Nor Win Campground"}</p>
+        <p className="text-sm uppercase tracking-[0.3em] opacity-70">{subtitle ?? "Willow Mill Campground"}</p>
         <h1 className="mt-3 text-5xl md:text-6xl">{title}</h1>
       </div>
     </section>

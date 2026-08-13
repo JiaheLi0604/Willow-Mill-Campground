@@ -9,8 +9,6 @@ import {
   Bird,
   Mountain,
   Anchor,
-  Flower2,
-  Wine,
   TreePine,
 } from "lucide-react";
 import type { LucideProps } from "lucide-react";
@@ -19,41 +17,41 @@ import type { ComponentType } from "react";
 const heroImg = "/images/hero.jpg";
 
 export const metadata: Metadata = {
-  title: "What's Nearby — Nor Win Campground",
+  title: "What's Nearby — Willow Mill Campground",
   description:
-    "Explore Rochester, the Finger Lakes, Sodus Bay, and dozens of local attractions from Nor Win Campground in Lyons, NY.",
+    "Explore Wisconsin Dells, Devil's Lake State Park, Aztalan State Park, and dozens of local attractions from Willow Mill Campground in Rio, WI.",
 };
 
 const cities = [
   {
-    name: "Rochester, NY",
-    time: "35 min",
-    distance: "35 mi",
-    slug: "/about/nearby/rochester",
-    directions:
-      "https://www.google.com/maps/dir/Lyons,+NY+14489/Rochester,+NY",
-  },
-  {
-    name: "Finger Lakes, NY",
+    name: "Wisconsin Dells, WI",
     time: "30 min",
     distance: "25 mi",
-    slug: "/about/nearby/finger-lakes",
+    slug: "/about/nearby/wisconsin-dells",
     directions:
-      "https://www.google.com/maps/dir/Lyons,+NY+14489/Seneca+Lake,+NY",
+      "https://www.google.com/maps/dir/Rio,+WI+53960/Wisconsin+Dells,+WI",
   },
   {
-    name: "Sodus Bay, NY",
-    time: "20 min",
-    distance: "15 mi",
-    slug: "/about/nearby/sodus-bay",
+    name: "Devil's Lake State Park, WI",
+    time: "1 hr",
+    distance: "40 mi",
+    slug: "/about/nearby/devils-lake",
     directions:
-      "https://www.google.com/maps/dir/Lyons,+NY+14489/Sodus+Bay,+NY",
+      "https://www.google.com/maps/dir/Rio,+WI+53960/Devil%27s+Lake+State+Park,+Baraboo,+WI",
+  },
+  {
+    name: "Aztalan State Park, WI",
+    time: "45 min",
+    distance: "30 mi",
+    slug: "/about/nearby/aztalan",
+    directions:
+      "https://www.google.com/maps/dir/Rio,+WI+53960/Aztalan+State+Park,+Lake+Mills,+WI",
   },
 ];
 
 const exploreMore = [
   {
-    name: "Long Term RV Sites, Lyons, NY",
+    name: "Long Term RV Sites, Rio, WI",
     slug: "/about/long-term-rv",
   },
 ];
@@ -65,15 +63,14 @@ interface Attraction {
   mapsUrl: string;
 }
 
-const BASE = "2921+Pilgrimport+Road+Lyons+NY+14489";
+const BASE = "N5830+County+Hwy+SS+Rio+WI+53960";
 
 const attractions: Attraction[] = [
-  { Icon: Waves,   name: "Erie Canal Discovery Center", time: "5 min drive",  mapsUrl: `https://www.google.com/maps/dir/${BASE}/Erie+Canal+Discovery+Center+Lyons+NY` },
-  { Icon: Bird,    name: "Montezuma Wildlife Refuge",   time: "20 min drive", mapsUrl: `https://www.google.com/maps/dir/${BASE}/Montezuma+National+Wildlife+Refuge+Seneca+Falls+NY` },
-  { Icon: Mountain,name: "Chimney Bluffs State Park",  time: "30 min drive", mapsUrl: `https://www.google.com/maps/dir/${BASE}/Chimney+Bluffs+State+Park+Wolcott+NY` },
-  { Icon: Anchor,  name: "Sodus Point Lighthouse",     time: "25 min drive", mapsUrl: `https://www.google.com/maps/dir/${BASE}/Sodus+Point+Lighthouse+Sodus+Point+NY` },
-  { Icon: Flower2, name: "Sonnenberg Gardens",         time: "45 min drive", mapsUrl: `https://www.google.com/maps/dir/${BASE}/Sonnenberg+Gardens+Canandaigua+NY` },
-  { Icon: Wine,    name: "Finger Lakes Wine Country",  time: "35 min drive", mapsUrl: `https://www.google.com/maps/dir/${BASE}/Finger+Lakes+Wine+Country+NY` },
+  { Icon: TreePine, name: "MacKenzie Environmental Education Center", time: "20 min drive", mapsUrl: `https://www.google.com/maps/dir/${BASE}/MacKenzie+Environmental+Education+Center+Poynette+WI` },
+  { Icon: Waves,    name: "Historic Portage Canal",                   time: "20 min drive", mapsUrl: `https://www.google.com/maps/dir/${BASE}/Portage+Canal+Portage+WI` },
+  { Icon: Anchor,   name: "Lake Wisconsin",                           time: "30 min drive", mapsUrl: `https://www.google.com/maps/dir/${BASE}/Lake+Wisconsin+Merrimac+WI` },
+  { Icon: Mountain, name: "Baraboo Range & Devil's Lake Bluffs",      time: "1 hr drive",   mapsUrl: `https://www.google.com/maps/dir/${BASE}/Devil%27s+Lake+State+Park+Baraboo+WI` },
+  { Icon: Bird,     name: "Horicon Marsh Wildlife Area",              time: "45 min drive", mapsUrl: `https://www.google.com/maps/dir/${BASE}/Horicon+Marsh+WI` },
 ];
 
 export default function Nearby() {
@@ -88,7 +85,7 @@ export default function Nearby() {
             Explore the Area
           </p>
           <h2 className="font-serif text-3xl md:text-4xl text-[var(--forest-deep)] mb-10">
-            Towns and Cities Near Nor Win
+            Towns and Cities Near Willow Mill
           </h2>
 
           <div className="grid gap-5 sm:grid-cols-3">
@@ -200,23 +197,21 @@ export default function Nearby() {
           </h2>
           <p className="text-[var(--cream)]/80 leading-relaxed mb-8">
             Book your stay and explore everything the surrounding area has to
-            offer — from the Erie Canal and Finger Lakes wine trails to Lake
-            Ontario&rsquo;s shoreline parks.
+            offer — from Wisconsin Dells waterparks to Devil&rsquo;s Lake&rsquo;s
+            bluffs and the shores of Lake Wisconsin.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
-              href="https://www.campspot.com/book/nor-win-campground"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-white text-[var(--forest-deep)] px-8 py-3 text-sm font-semibold hover:bg-[var(--cream)] transition-colors"
+              href="https://www.campspot.com/book/willow-mill-campground"
+              className="inline-flex items-center justify-center rounded-full bg-[var(--book-green)] text-white px-8 py-3 text-sm font-semibold hover:bg-[var(--book-green-deep)] transition-colors"
             >
               Book Now
             </a>
             <a
-              href="tel:3159464436"
+              href="tel:9209921212"
               className="inline-flex items-center justify-center rounded-full border border-white/60 text-white px-8 py-3 text-sm font-semibold hover:bg-white/10 transition-colors"
             >
-              (315) 946-4436
+              (920) 992-1212
             </a>
           </div>
         </div>

@@ -7,9 +7,9 @@ const heroImg = "/images/work-order-hero.png";
 const campPhoto = "/images/park-hero.jpg";
 
 export const metadata: Metadata = {
-  title: "Work Order Form — Nor Win Campground",
+  title: "Work Order Form — Willow Mill Campground",
   description:
-    "Submit a maintenance work order request for your site at Nor Win Campground in Lyons, NY.",
+    "Submit a maintenance work order request for your site at Willow Mill Campground in Rio, WI.",
 };
 
 export default function WorkOrder() {
@@ -40,7 +40,7 @@ export default function WorkOrder() {
               </h2>
               <p className="text-[var(--muted-foreground)] leading-relaxed">
                 Once a work order has been filed and processed, one member of
-                the Nor Win maintenance team will stop by and inspect the work
+                the Willow Mill maintenance team will stop by and inspect the work
                 order area. Once that is done, we will begin the process of
                 completing the work order. Once the work order sheet has been
                 handed off to either the Head Maintenance or General Manager,
@@ -55,7 +55,7 @@ export default function WorkOrder() {
             <div className="overflow-hidden rounded-lg">
               <img
                 src={campPhoto}
-                alt="Nor Win Campground"
+                alt="Willow Mill Campground"
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -203,31 +203,31 @@ export default function WorkOrder() {
       <section className="bg-[var(--forest-deep)] py-20 text-center">
         <div className="container-narrow max-w-2xl">
           <h2 className="font-serif text-4xl md:text-5xl text-[var(--cream)] mb-5">
-            Ready to Experience Nor Win?
+            Ready to Experience Willow Mill?
           </h2>
           <p
             className="text-[var(--cream)]/80 leading-relaxed mb-8 mx-auto"
             style={{ maxWidth: "530px" }}
           >
-            Book your stay at Nor Win Campground and enjoy a relaxing getaway in
-            Lyons, NY — we&rsquo;re here to make sure everything runs smoothly
+            Book your stay at Willow Mill Campground and enjoy a relaxing getaway in
+            Rio, WI — we&rsquo;re here to make sure everything runs smoothly
             from the moment you arrive.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
-              href="https://www.campspot.com/book/nor-win-campground"
+              href="https://www.campspot.com/book/willow-mill-campground"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-[var(--forest)] text-white px-8 py-3 text-sm font-semibold hover:brightness-110 transition-all"
+              className="inline-flex items-center justify-center rounded-full bg-[var(--book-green)] text-white px-8 py-3 text-sm font-semibold hover:brightness-110 transition-all"
             >
               Book Now
             </a>
             <a
-              href="tel:3159464436"
+              href="tel:9209921212"
               className="inline-flex items-center gap-2 rounded-full border border-white/60 text-white px-8 py-3 text-sm font-semibold hover:bg-white/10 transition-colors"
             >
               <Phone className="h-4 w-4" />
-              (315) 946-4436
+              (920) 992-1212
             </a>
           </div>
         </div>

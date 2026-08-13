@@ -4,11 +4,11 @@ import { Layout, PageHero } from "@/components/Layout";
 const playground = "/images/playground.jpg";
 
 export const metadata: Metadata = {
-  title: "Events — Nor Win Campground",
-  description: "Weekend schedule and 2025 special events at Nor Win Campground in Lyons, NY.",
+  title: "Events — Willow Mill Campground",
+  description: "Weekend schedule and 2025 special events at Willow Mill Campground in Rio, WI.",
   openGraph: {
-    title: "Events — Nor Win Campground",
-    description: "Weekend schedule and 2025 special events at Nor Win Campground.",
+    title: "Events — Willow Mill Campground",
+    description: "Weekend schedule and 2025 special events at Willow Mill Campground.",
   },
 };
 

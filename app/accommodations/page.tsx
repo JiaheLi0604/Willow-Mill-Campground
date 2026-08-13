@@ -3,8 +3,8 @@ import Link from "next/link";
 import { Layout, PageHero } from "@/components/Layout";
 
 export const metadata: Metadata = {
-  title: "Accommodations — Nor Win Campground",
-  description: "RV sites, seasonal sites, and tent sites at Nor Win Campground in Lyons, NY.",
+  title: "Accommodations — Willow Mill Campground",
+  description: "RV sites, seasonal sites, and tent sites at Willow Mill Campground in Rio, WI.",
 };
 
 export default function AccommodationsIndex() {
@@ -15,7 +15,7 @@ export default function AccommodationsIndex() {
         <div className="container-narrow grid gap-8 md:grid-cols-3">
           {[
             { to: "/accommodations/rv-sites" as const, t: "RV Sites", d: "Spacious, shaded sites with water and electric." },
-            { to: "/accommodations/seasonal" as const, t: "Seasonal Sites", d: "A summer home in Wayne County, with neighbors who feel like family." },
+            { to: "/accommodations/seasonal" as const, t: "Seasonal Sites", d: "A summer home in Columbia County, with neighbors who feel like family." },
             { to: "/accommodations/tent-sites" as const, t: "Tent Sites", d: "Quiet grassy sites for tent campers who want the basics done right." },
           ].map((c) => (
             <Link key={c.to} href={c.to} className="block bg-[var(--cream)] p-8 rounded-lg hover:shadow-md transition-shadow">

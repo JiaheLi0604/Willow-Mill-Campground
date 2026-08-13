@@ -4,14 +4,14 @@ import { Layout } from "@/components/Layout";
 import { Phone, MapPin, Clock } from "lucide-react";
 
 const heroImg = "/images/park-hero.jpg";
-const PHONE = "(315) 946-4436";
-const PHONE_HREF = "tel:3159464436";
-const ADDRESS_LINE1 = "2921 Pilgrimport Road";
-const ADDRESS_LINE2 = "Lyons, NY 14489";
+const PHONE = "(920) 992-1212";
+const PHONE_HREF = "tel:9209921212";
+const ADDRESS_LINE1 = "N5830 County Hwy SS";
+const ADDRESS_LINE2 = "Rio, WI 53960";
 const DIRECTIONS_URL =
-  "https://maps.google.com/?q=2921+Pilgrimport+Road,+Lyons,+NY+14489";
+  "https://maps.google.com/?q=N5830+County+Hwy+SS,+Rio,+WI+53960";
 const MAP_EMBED =
-  "https://maps.google.com/maps?q=NorWin+Campground+Lyons+NY+14489&t=&z=15&ie=UTF8&iwloc=&output=embed";
+  "https://maps.google.com/maps?q=Willow+Mill+Campground+Rio+WI+53960&t=&z=15&ie=UTF8&iwloc=&output=embed";
 
 export default function Contact() {
   return (
@@ -50,7 +50,7 @@ export default function Contact() {
             style={{ maxWidth: "560px", fontSize: "16px", opacity: 0.9 }}
           >
             Speak directly with our friendly team. No bots, no wait — just real, helpful answers to
-            plan your perfect stay at Nor Win Campground.
+            plan your perfect stay at Willow Mill Campground.
           </p>
           <div className="inline-flex items-center gap-5">
             <span
@@ -175,7 +175,7 @@ export default function Contact() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Nor Win Campground location"
+              title="Willow Mill Campground location"
             />
           </div>
 

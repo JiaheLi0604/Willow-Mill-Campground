@@ -5,7 +5,7 @@ import { Layout } from "@/components/Layout";
 import { Calendar, Phone } from "lucide-react";
 
 const heroImg = "/images/rvsite.jpg";
-const BOOK_URL = "https://www.campspot.com/book/nor-win-campground";
+const BOOK_URL = "https://www.campspot.com/book/willow-mill-campground";
 
 export default function Rates() {
   const [activeSection, setActiveSection] = useState("daily-weekly-rates");
@@ -136,7 +136,7 @@ export default function Rates() {
                 href={BOOK_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-lg bg-[var(--forest)] text-white text-sm font-semibold hover:brightness-110 transition-all mt-auto"
+                className="inline-flex items-center justify-center rounded-lg bg-[var(--book-green)] text-white text-sm font-semibold hover:brightness-110 transition-all mt-auto"
                 style={{ padding: "8px 25px" }}
               >
                 Book Now →
@@ -193,7 +193,7 @@ export default function Rates() {
                 href={BOOK_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-lg bg-[var(--forest)] text-white text-sm font-semibold hover:brightness-110 transition-all mt-auto"
+                className="inline-flex items-center justify-center rounded-lg bg-[var(--book-green)] text-white text-sm font-semibold hover:brightness-110 transition-all mt-auto"
                 style={{ padding: "8px 25px" }}
               >
                 Book Now →
@@ -215,26 +215,26 @@ export default function Rates() {
           className="text-[18px] text-[var(--cream)]/80 leading-relaxed mb-8 mx-auto"
           style={{ maxWidth: "530px" }}
         >
-          Reserve your spot today and experience everything Nor Win Campground
-          has to offer along the Erie Canal in Wayne County, NY.
+          Reserve your spot today and experience everything Willow Mill Campground
+          has to offer on the water in Rio, WI.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <a
             href={BOOK_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-lg bg-[var(--forest)] text-white font-semibold hover:brightness-110 transition-all"
+            className="inline-flex items-center justify-center rounded-lg bg-[var(--book-green)] text-white font-semibold hover:brightness-110 transition-all"
             style={{ padding: "11px 35px" }}
           >
             Book Now
           </a>
           <a
-            href="tel:3159464436"
+            href="tel:9209921212"
             className="inline-flex items-center gap-2 rounded-lg border border-[#ddd7c9] text-[var(--cream)] font-semibold hover:bg-white/10 transition-colors"
             style={{ padding: "10px 23px" }}
           >
             <Phone className="h-4 w-4" />
-            (315) 946-4436
+            (920) 992-1212
           </a>
         </div>
       </section>
