@@ -5,7 +5,7 @@ import { Layout } from "@/components/Layout";
 import { Calendar, Phone } from "lucide-react";
 
 const heroImg = "/images/rvsite.jpg";
-const BOOK_URL = "https://www.campspot.com/book/willow-mill-campground";
+const BOOK_URL = "https://www.campspot.com/park/willow-mill-campground-rio-wi";
 
 export default function Rates() {
   const [activeSection, setActiveSection] = useState("daily-weekly-rates");
@@ -122,14 +122,14 @@ export default function Rates() {
                   className="font-bold text-[var(--forest-deep)] leading-none"
                   style={{ fontSize: "1.875rem" }}
                 >
-                  $58
+                  $55
                   <span className="text-sm font-normal">/night</span>
                 </p>
                 <p
                   className="text-[var(--muted-foreground)] mt-1"
                   style={{ fontSize: "0.9375rem" }}
                 >
-                  $338/week
+                  $322/week
                 </p>
               </div>
               <a
@@ -179,14 +179,14 @@ export default function Rates() {
                   className="font-bold text-[var(--forest-deep)] leading-none"
                   style={{ fontSize: "1.875rem" }}
                 >
-                  $999
+                  $700
                   <span className="text-sm font-normal">/month</span>
                 </p>
                 <p
                   className="text-[var(--muted-foreground)] mt-1"
                   style={{ fontSize: "0.9375rem" }}
                 >
-                  $2,652/season
+                  $3,150/season
                 </p>
               </div>
               <a

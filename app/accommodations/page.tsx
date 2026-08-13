@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Layout, PageHero } from "@/components/Layout";
+import { ComingSoon } from "@/components/ComingSoon";
+
+const SHOW_COMING_SOON = true;
 
 export const metadata: Metadata = {
   title: "Accommodations — Willow Mill Campground",
@@ -8,6 +11,13 @@ export const metadata: Metadata = {
 };
 
 export default function AccommodationsIndex() {
+  if (SHOW_COMING_SOON) {
+    return (
+      <Layout>
+        <ComingSoon title="Accommodations" />
+      </Layout>
+    );
+  }
   return (
     <Layout>
       <PageHero title="Accommodations" subtitle="Where you'll stay" />

@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { NearbyCityPage } from "@/components/NearbyCityPage";
+import { Layout } from "@/components/Layout";
+import { ComingSoon } from "@/components/ComingSoon";
+
+const SHOW_COMING_SOON = true;
 
 const hero = "/images/view3.jpg";
 const heroImage = "/images/view4.jpg";
@@ -15,6 +19,13 @@ export const metadata: Metadata = {
 };
 
 export default function AztalanPage() {
+  if (SHOW_COMING_SOON) {
+    return (
+      <Layout>
+        <ComingSoon title="Aztalan State Park" />
+      </Layout>
+    );
+  }
   return (
     <NearbyCityPage
       hero={hero}

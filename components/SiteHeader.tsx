@@ -109,7 +109,7 @@ export function SiteHeader() {
 
           <div className="hidden lg:block">
             <a
-              href="https://www.campspot.com/book/willow-mill-campground"
+              href="https://www.campspot.com/park/willow-mill-campground-rio-wi"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-[var(--book-green)] px-6 py-2.5 text-sm font-semibold text-white hover:bg-[var(--book-green-deep)] transition-colors"
@@ -136,7 +136,7 @@ export function SiteHeader() {
               </Link>
             ))}
             <a
-              href="https://www.campspot.com/book/willow-mill-campground"
+              href="https://www.campspot.com/park/willow-mill-campground-rio-wi"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}

@@ -4,6 +4,9 @@ import { Star, MapPin } from "lucide-react";
 import { WaysToStayGrid } from "@/components/accommodations/WaysToStayGrid";
 import { ReviewsCardMarquee } from "@/components/home/ReviewsCardMarquee";
 import { GoogleIcon } from "@/components/home/GoogleIcon";
+import { ComingSoon } from "@/components/ComingSoon";
+
+const SHOW_COMING_SOON = true;
 
 const heroImg = "/images/park-hero.jpg";
 const parkPhoto = "/images/view.jpg";
@@ -54,6 +57,13 @@ const reviews = [
 ];
 
 export default function About() {
+  if (SHOW_COMING_SOON) {
+    return (
+      <Layout>
+        <ComingSoon title="About Us" />
+      </Layout>
+    );
+  }
   return (
     <Layout>
       <PageHero title="Our Story" subtitle="About Us" image={heroImg} />
@@ -153,7 +163,7 @@ export default function About() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
-              href="https://www.campspot.com/book/willow-mill-campground"
+              href="https://www.campspot.com/park/willow-mill-campground-rio-wi"
               className="inline-flex items-center justify-center rounded-full bg-[var(--book-green)] text-white px-8 py-3 text-sm font-semibold hover:bg-[var(--book-green-deep)] transition-colors"
             >
               Book Now

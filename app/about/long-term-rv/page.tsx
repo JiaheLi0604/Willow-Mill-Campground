@@ -6,6 +6,9 @@ import { FeatureIconsGrid } from "@/components/accommodations/FeatureIconsGrid";
 import { CallBanner } from "@/components/accommodations/CallBanner";
 import { WaysToStayGrid } from "@/components/accommodations/WaysToStayGrid";
 import { GalleryLightbox } from "@/components/home/GalleryLightbox";
+import { ComingSoon } from "@/components/ComingSoon";
+
+const SHOW_COMING_SOON = true;
 
 const heroImg = "/images/park-hero.jpg";
 const orchard = "/images/rv-site-new.jpg";
@@ -43,6 +46,13 @@ const gallery = [
 ];
 
 export default function LongTerm() {
+  if (SHOW_COMING_SOON) {
+    return (
+      <Layout>
+        <ComingSoon title="Long Term RV Sites" />
+      </Layout>
+    );
+  }
   return (
     <Layout>
       <PageHero title="Long Term RV Sites" subtitle="Ways to Stay" image={heroImg} />
@@ -68,7 +78,7 @@ export default function LongTerm() {
               — and yes, leashed dogs are always welcome.
             </p>
             <a
-              href="https://www.campspot.com/book/willow-mill-campground"
+              href="https://www.campspot.com/park/willow-mill-campground-rio-wi"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary inline-block px-10 py-4 text-base tracking-wider"

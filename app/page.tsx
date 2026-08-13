@@ -28,7 +28,7 @@ const kayakRentals = "/images/pond.jpg";
 const ADDRESS = "N5830 County Hwy SS, Rio, WI 53960";
 const PHONE_DISPLAY = "(920) 992-1212";
 const PHONE_TEL = "9209921212";
-const BOOK_URL = "https://www.campspot.com/book/willow-mill-campground";
+const BOOK_URL = "https://www.campspot.com/park/willow-mill-campground-rio-wi";
 const MAP_EMBED = `https://www.google.com/maps?q=${encodeURIComponent(ADDRESS)}&output=embed`;
 const DIRECTIONS_URL = `https://maps.google.com/?q=${encodeURIComponent(ADDRESS)}`;
 

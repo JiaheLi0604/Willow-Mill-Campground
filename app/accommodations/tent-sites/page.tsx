@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Layout, PageHero } from "@/components/Layout";
+import { ComingSoon } from "@/components/ComingSoon";
+
+const SHOW_COMING_SOON = true;
 
 const playground = "/images/playground.jpg";
 
@@ -9,6 +12,13 @@ export const metadata: Metadata = {
 };
 
 export default function TentSites() {
+  if (SHOW_COMING_SOON) {
+    return (
+      <Layout>
+        <ComingSoon title="Tent Sites" />
+      </Layout>
+    );
+  }
   return (
     <Layout>
       <PageHero title="Tent Sites" subtitle="Accommodations" />
@@ -20,7 +30,7 @@ export default function TentSites() {
             <p className="text-[var(--muted-foreground)] leading-relaxed mb-6">
               Our tent sites keep things simple — grassy, shaded ground, a picnic table, and a fire ring, set apart from the RV loops for a quieter stay. Shared bathrooms, showers, and the camp store are all just a short walk away.
             </p>
-            <a href="https://www.campspot.com/book/willow-mill-campground" target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-3 inline-block">Check Availability</a>
+            <a href="https://www.campspot.com/park/willow-mill-campground-rio-wi" target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-3 inline-block">Check Availability</a>
           </div>
         </div>
       </section>

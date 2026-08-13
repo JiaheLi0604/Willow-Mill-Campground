@@ -2,10 +2,13 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Layout } from "@/components/Layout";
+import { ComingSoon } from "@/components/ComingSoon";
 import { Phone, X, ChevronLeft, ChevronRight } from "lucide-react";
 
+const SHOW_COMING_SOON = true;
+
 const heroImg = "/images/view5.jpg";
-const BOOK_URL = "https://www.campspot.com/book/willow-mill-campground";
+const BOOK_URL = "https://www.campspot.com/park/willow-mill-campground-rio-wi";
 
 const IMAGES = [
   { src: "/images/gallery/park_campers_full.jpg", alt: "Campers at Willow Mill Campground" },
@@ -74,6 +77,14 @@ export default function Gallery() {
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
   }, [lightboxIndex]);
+
+  if (SHOW_COMING_SOON) {
+    return (
+      <Layout>
+        <ComingSoon title="Photo Gallery" />
+      </Layout>
+    );
+  }
 
   return (
     <Layout>

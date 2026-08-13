@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Layout, PageHero } from "@/components/Layout";
+import { ComingSoon } from "@/components/ComingSoon";
+
+const SHOW_COMING_SOON = true;
 
 const playground = "/images/playground.jpg";
 
@@ -95,6 +98,13 @@ const specialEvents: { date: string; title: string; details: string[] }[] = [
 ];
 
 export default function Events() {
+  if (SHOW_COMING_SOON) {
+    return (
+      <Layout>
+        <ComingSoon title="Events" />
+      </Layout>
+    );
+  }
   const groupedEvents = specialEvents.reduce(
     (acc, event) => {
       const existing = acc.find((g) => g.date === event.date);

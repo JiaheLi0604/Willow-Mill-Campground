@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Layout, PageHero } from "@/components/Layout";
+import { ComingSoon } from "@/components/ComingSoon";
+
+const SHOW_COMING_SOON = true;
 
 const hero = "/images/hero.jpg";
 
@@ -9,6 +12,13 @@ export const metadata: Metadata = {
 };
 
 export default function Seasonal() {
+  if (SHOW_COMING_SOON) {
+    return (
+      <Layout>
+        <ComingSoon title="Seasonal Sites" />
+      </Layout>
+    );
+  }
   return (
     <Layout>
       <PageHero title="Seasonal Sites" subtitle="Accommodations" />

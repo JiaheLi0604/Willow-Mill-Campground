@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Layout } from "@/components/Layout";
 import { Phone } from "lucide-react";
+import { ComingSoon } from "@/components/ComingSoon";
+
+const SHOW_COMING_SOON = true;
 
 const heroImg = "/images/work-order-hero.png";
 const campPhoto = "/images/park-hero.jpg";
@@ -13,6 +16,13 @@ export const metadata: Metadata = {
 };
 
 export default function WorkOrder() {
+  if (SHOW_COMING_SOON) {
+    return (
+      <Layout>
+        <ComingSoon title="Work Order Form" />
+      </Layout>
+    );
+  }
   return (
     <Layout>
       {/* ── Hero ─────────────────────────────────────────────────────── */}
@@ -215,7 +225,7 @@ export default function WorkOrder() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
-              href="https://www.campspot.com/book/willow-mill-campground"
+              href="https://www.campspot.com/park/willow-mill-campground-rio-wi"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-[var(--book-green)] text-white px-8 py-3 text-sm font-semibold hover:brightness-110 transition-all"

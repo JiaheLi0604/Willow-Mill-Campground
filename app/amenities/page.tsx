@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Layout } from "@/components/Layout";
+import { ComingSoon } from "@/components/ComingSoon";
 import {
   ShoppingBag,
   Bath,
@@ -10,6 +11,8 @@ import {
   Star,
   Phone,
 } from "lucide-react";
+
+const SHOW_COMING_SOON = true;
 
 const heroImg       = "/images/pond.jpg";
 const poolImg       = "/images/pool.jpg";
@@ -60,6 +63,13 @@ const outdoorCards = [
 ];
 
 export default function Amenities() {
+  if (SHOW_COMING_SOON) {
+    return (
+      <Layout>
+        <ComingSoon title="Amenities" />
+      </Layout>
+    );
+  }
   return (
     <Layout>
       {/* ── Hero ──────────────────────────────────────────────────────── */}
@@ -195,7 +205,7 @@ export default function Amenities() {
               </div>
               <div>
                 <a
-                  href="https://www.campspot.com/book/willow-mill-campground"
+                  href="https://www.campspot.com/park/willow-mill-campground-rio-wi"
                   className="inline-flex items-center justify-center rounded-lg bg-[var(--forest)] text-white px-8 py-3 text-sm font-semibold hover:brightness-110 transition-all"
                 >
                   Book Your Stay
@@ -224,7 +234,7 @@ export default function Amenities() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
-              href="https://www.campspot.com/book/willow-mill-campground"
+              href="https://www.campspot.com/park/willow-mill-campground-rio-wi"
               className="inline-flex items-center justify-center rounded-lg bg-[var(--book-green)] text-white px-8 py-3 text-sm font-semibold hover:brightness-110 transition-all"
             >
               Book Now

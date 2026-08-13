@@ -13,6 +13,9 @@ import {
 } from "lucide-react";
 import type { LucideProps } from "lucide-react";
 import type { ComponentType } from "react";
+import { ComingSoon } from "@/components/ComingSoon";
+
+const SHOW_COMING_SOON = true;
 
 const heroImg = "/images/hero.jpg";
 
@@ -74,6 +77,13 @@ const attractions: Attraction[] = [
 ];
 
 export default function Nearby() {
+  if (SHOW_COMING_SOON) {
+    return (
+      <Layout>
+        <ComingSoon title="What's Nearby" />
+      </Layout>
+    );
+  }
   return (
     <Layout>
       <PageHero title="What's Nearby" image={heroImg} />
@@ -202,7 +212,7 @@ export default function Nearby() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
-              href="https://www.campspot.com/book/willow-mill-campground"
+              href="https://www.campspot.com/park/willow-mill-campground-rio-wi"
               className="inline-flex items-center justify-center rounded-full bg-[var(--book-green)] text-white px-8 py-3 text-sm font-semibold hover:bg-[var(--book-green-deep)] transition-colors"
             >
               Book Now
