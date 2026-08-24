@@ -22,8 +22,8 @@ const sunset = "/images/gallery/office_sunset_full.jpg";
 const campers = "/images/gallery/park_campers_full.jpg";
 const swimmingPool = "/images/gallery/swimming_pool_full.jpg";
 const playgroundFull = "/images/gallery/playground_full.jpg";
-const walkingTrails = "/images/view.jpg";
-const kayakRentals = "/images/pond.jpg";
+const walkingTrails = "/images/walking-trails.jpg";
+const kayakRentals = "/images/pond-reflection.jpg";
 
 const ADDRESS = "N5830 County Hwy SS, Rio, WI 53960";
 const PHONE_DISPLAY = "(920) 992-1212";
