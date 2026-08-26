@@ -8,14 +8,14 @@ import { GalleryLightbox, type GalleryPhoto } from "@/components/home/GalleryLig
 import { GoogleIcon } from "@/components/home/GoogleIcon";
 
 const hero = "/images/hero.webp";
-const pool = "/images/pool.jpg";
+const pool = "/images/pool-real.jpg";
 const playground = "/images/playground.jpg";
-const orchard = "/images/dog.jpg";
+const orchard = "/images/dog-park-beach.png";
 const parkHero = "/images/park-hero.jpg";
-const longTermHero = "/images/rv-site-new.jpg";
-const rvsite = "/images/rvsite.jpg";
-const gameroom = "/images/gameroom.jpg";
-const minigolf = "/images/minigolf.jpg";
+const longTermHero = "/images/rv-lane.jpg";
+const rvsite = "/images/rv-office-row.jpg";
+const gameroom = "/images/gameroom-patio.png";
+const minigolf = "/images/minigolf-lakeside.png";
 const badminton = "/images/gallery/badminton_full.jpg";
 const horseshoes = "/images/Rechall.jpg";
 const sunset = "/images/gallery/office_sunset_full.jpg";
@@ -23,7 +23,8 @@ const campers = "/images/gallery/park_campers_full.jpg";
 const swimmingPool = "/images/gallery/swimming_pool_full.jpg";
 const playgroundFull = "/images/gallery/playground_full.jpg";
 const walkingTrails = "/images/walking-trails.jpg";
-const kayakRentals = "/images/pond-reflection.jpg";
+const kayakRentals = "/images/kayak-rental.png";
+const pondReflection = "/images/pond-reflection.jpg";
 
 const ADDRESS = "N5830 County Hwy SS, Rio, WI 53960";
 const PHONE_DISPLAY = "(920) 992-1212";
@@ -33,14 +34,14 @@ const MAP_EMBED = `https://www.google.com/maps?q=${encodeURIComponent(ADDRESS)}&
 const DIRECTIONS_URL = `https://maps.google.com/?q=${encodeURIComponent(ADDRESS)}`;
 
 const galleryPhotos: GalleryPhoto[] = [
-  { src: campers, alt: "Campers enjoying Willow Mill Campground" },
-  { src: "/images/sign.jpg", alt: "Happy Campers Welcome sign at Willow Mill" },
-  { src: swimmingPool, alt: "Swimming pool at Willow Mill" },
-  { src: playgroundFull, alt: "Playground at Willow Mill" },
-  { src: rvsite, alt: "RV site at Willow Mill" },
-  { src: badminton, alt: "Badminton court at Willow Mill" },
-  { src: horseshoes, alt: "Rec hall at Willow Mill" },
-  { src: orchard, alt: "Dog-friendly camping at Willow Mill" },
+  { src: hero, alt: "Waterfront view at Willow Mill Campground" },
+  { src: playground, alt: "Playground at Willow Mill" },
+  { src: pool, alt: "Swimming pool at Willow Mill" },
+  { src: kayakRentals, alt: "Kayaks and paddle boats at Willow Mill" },
+  { src: walkingTrails, alt: "Lakeside dock at Willow Mill" },
+  { src: pondReflection, alt: "Pond reflection at Willow Mill" },
+  { src: gameroom, alt: "Welcome patio at Willow Mill" },
+  { src: orchard, alt: "Beach and playground at Willow Mill" },
 ];
 
 export default async function Home() {
