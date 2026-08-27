@@ -8,7 +8,7 @@ import { Phone, X, ChevronLeft, ChevronRight } from "lucide-react";
 const SHOW_COMING_SOON = true;
 
 const heroImg = "/images/view5.jpg";
-const BOOK_URL = "https://www.campspot.com/park/willow-mill-campground-rio-wi";
+const BOOK_URL = "https://www.campspot.com/book/willow-mill-campground";
 
 const IMAGES = [
   { src: "/images/gallery/park_campers_full.jpg", alt: "Campers at Willow Mill Campground" },

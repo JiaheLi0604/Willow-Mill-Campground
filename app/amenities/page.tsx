@@ -205,7 +205,7 @@ export default function Amenities() {
               </div>
               <div>
                 <a
-                  href="https://www.campspot.com/park/willow-mill-campground-rio-wi"
+                  href="https://www.campspot.com/book/willow-mill-campground"
                   className="inline-flex items-center justify-center rounded-lg bg-[var(--forest)] text-white px-8 py-3 text-sm font-semibold hover:brightness-110 transition-all"
                 >
                   Book Your Stay
@@ -234,7 +234,7 @@ export default function Amenities() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
-              href="https://www.campspot.com/park/willow-mill-campground-rio-wi"
+              href="https://www.campspot.com/book/willow-mill-campground"
               className="inline-flex items-center justify-center rounded-lg bg-[var(--book-green)] text-white px-8 py-3 text-sm font-semibold hover:brightness-110 transition-all"
             >
               Book Now

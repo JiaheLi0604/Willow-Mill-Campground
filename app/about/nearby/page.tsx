@@ -212,7 +212,7 @@ export default function Nearby() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
-              href="https://www.campspot.com/park/willow-mill-campground-rio-wi"
+              href="https://www.campspot.com/book/willow-mill-campground"
               className="inline-flex items-center justify-center rounded-full bg-[var(--book-green)] text-white px-8 py-3 text-sm font-semibold hover:bg-[var(--book-green-deep)] transition-colors"
             >
               Book Now

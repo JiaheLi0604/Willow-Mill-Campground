@@ -30,7 +30,7 @@ export default function TentSites() {
             <p className="text-[var(--muted-foreground)] leading-relaxed mb-6">
               Our tent sites keep things simple — grassy, shaded ground, a picnic table, and a fire ring, set apart from the RV loops for a quieter stay. Shared bathrooms, showers, and the camp store are all just a short walk away.
             </p>
-            <a href="https://www.campspot.com/park/willow-mill-campground-rio-wi" target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-3 inline-block">Check Availability</a>
+            <a href="https://www.campspot.com/book/willow-mill-campground" target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-3 inline-block">Check Availability</a>
           </div>
         </div>
       </section>

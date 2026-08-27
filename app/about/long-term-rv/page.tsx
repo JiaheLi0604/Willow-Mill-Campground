@@ -78,7 +78,7 @@ export default function LongTerm() {
               — and yes, leashed dogs are always welcome.
             </p>
             <a
-              href="https://www.campspot.com/park/willow-mill-campground-rio-wi"
+              href="https://www.campspot.com/book/willow-mill-campground"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary inline-block px-10 py-4 text-base tracking-wider"

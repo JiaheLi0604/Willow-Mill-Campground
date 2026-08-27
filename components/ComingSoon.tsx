@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Phone, ArrowRight } from "lucide-react";
 
-const BOOK_URL = "https://www.campspot.com/park/willow-mill-campground-rio-wi";
+const BOOK_URL = "https://www.campspot.com/book/willow-mill-campground";
 const PHONE_DISPLAY = "(920) 992-1212";
 const PHONE_TEL = "9209921212";
 

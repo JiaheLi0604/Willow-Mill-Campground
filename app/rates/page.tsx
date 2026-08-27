@@ -5,7 +5,7 @@ import { Layout } from "@/components/Layout";
 import { Calendar, Phone } from "lucide-react";
 
 const heroImg = "/images/rvsite.jpg";
-const BOOK_URL = "https://www.campspot.com/park/willow-mill-campground-rio-wi";
+const BOOK_URL = "https://www.campspot.com/book/willow-mill-campground";
 
 export default function Rates() {
   const [activeSection, setActiveSection] = useState("daily-weekly-rates");
