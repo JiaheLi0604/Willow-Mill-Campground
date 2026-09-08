@@ -2,14 +2,12 @@ import type { Metadata } from "next";
 import { Layout, PageHero } from "@/components/Layout";
 import { Star, MapPin } from "lucide-react";
 import { WaysToStayGrid } from "@/components/accommodations/WaysToStayGrid";
-import { ReviewsCardMarquee } from "@/components/home/ReviewsCardMarquee";
+import { ReviewsCardMarquee, type StaticReview } from "@/components/home/ReviewsCardMarquee";
 import { GoogleIcon } from "@/components/home/GoogleIcon";
-import { ComingSoon } from "@/components/ComingSoon";
+import { getGoogleReviews } from "@/lib/google-reviews";
 
-const SHOW_COMING_SOON = true;
-
-const heroImg = "/images/park-hero.jpg";
-const parkPhoto = "/images/view.jpg";
+const heroImg = "/images/rv-office-row.jpg";
+const parkPhoto = "/images/pond-reflection.jpg";
 
 export const metadata: Metadata = {
   title: "About Us — Willow Mill Campground",
@@ -17,7 +15,8 @@ export const metadata: Metadata = {
     "Willow Mill Campground — a family-owned campground in Rio, WI welcoming campers since 1968.",
 };
 
-const reviews = [
+// Fallback reviews shown only if the live Google Reviews fetch returns nothing
+const fallbackReviews: StaticReview[] = [
   {
     author: "Sarah M.",
     rating: 5,
@@ -27,7 +26,7 @@ const reviews = [
   {
     author: "Tom K.",
     rating: 5,
-    text: "Great campground with a wonderful community feel. Full hookups worked perfectly, and the location is ideal — close to Wisconsin Dells and Devil's Lake State Park.",
+    text: "Great campground with a wonderful community feel. Full hookups worked perfectly, and the location is ideal — close to Wisconsin Dells.",
     date: "July 2024",
   },
   {
@@ -36,34 +35,22 @@ const reviews = [
     text: "Clean facilities, beautiful shade trees, and incredibly helpful staff. We stayed for a week and wish we could have stayed longer. Highly recommend Willow Mill!",
     date: "June 2024",
   },
-  {
-    author: "Mike D.",
-    rating: 5,
-    text: "Perfect spot for a Wisconsin Dells trip. The sites are big enough for our 40-foot rig and the full hookups are reliable. We'll definitely be back next season.",
-    date: "September 2024",
-  },
-  {
-    author: "Linda P.",
-    rating: 5,
-    text: "Willow Mill has been our summer home for three years now. The community here is wonderful — it's more like a neighborhood than a campground. Can't imagine going anywhere else.",
-    date: "August 2024",
-  },
-  {
-    author: "David W.",
-    rating: 5,
-    text: "Stayed for two weeks while working in the area. Everything was clean, quiet, and well-managed. The location between Madison and Wisconsin Dells couldn't be more convenient.",
-    date: "May 2024",
-  },
 ];
 
-export default function About() {
-  if (SHOW_COMING_SOON) {
-    return (
-      <Layout>
-        <ComingSoon title="About Us" />
-      </Layout>
-    );
-  }
+export default async function About() {
+  const reviews = await getGoogleReviews();
+
+  const ratingValue = reviews.total > 0 ? reviews.rating.toFixed(1) : "4.7";
+  const reviewCards: StaticReview[] =
+    reviews.reviews.length > 0
+      ? reviews.reviews.map((r) => ({
+          author: r.author,
+          rating: r.rating,
+          text: r.text,
+          date: r.relativeTime || "",
+        }))
+      : fallbackReviews;
+
   return (
     <Layout>
       <PageHero title="Our Story" subtitle="About Us" image={heroImg} />
@@ -79,23 +66,22 @@ export default function About() {
               More Than a Campground. A Community.
             </h2>
             <p className="text-[var(--muted-foreground)] leading-relaxed mb-5">
-              Willow Mill Campground has been welcoming campers to Rio,
-              Wisconsin since 1968. Set on 120 acres that were once home to a
-              water-powered flour mill, our family-owned park along the
-              Jennings Trout Stream is a quiet, waterfront retreat with a
-              spring-fed lake, mature trees, spacious sites, and a community of
-              guests who return year after year.
+              Welcome to Willow Mill Campsite, a family-oriented, waterfront
+              campsite in Rio, Wisconsin, and a Columbia County favorite since
+              1968. Set along County Highway SS, our lakefront property
+              features spacious, shaded campsites with picnic tables, and
+              relaxing water views.
             </p>
             <p className="text-[var(--muted-foreground)] leading-relaxed mb-8">
               Whether you&rsquo;re here for a weekend or putting down roots for
               the season, Willow Mill offers the amenities you need and the
-              peaceful setting you deserve. We&rsquo;ve spent more than 55 years
-              making sure every guest feels at home in Columbia County.
+              peaceful setting you deserve — from a seasonal pool and kayak
+              rentals to mini golf, a game room, and a pet-friendly dog park.
             </p>
             <div className="grid grid-cols-2 gap-4">
               <div className="rounded-xl border border-[var(--border)] bg-white p-5 text-center shadow-sm">
                 <Star className="h-5 w-5 text-[var(--forest-deep)] mx-auto mb-2" />
-                <p className="text-3xl font-semibold text-[var(--forest-deep)]">4.7</p>
+                <p className="text-3xl font-semibold text-[var(--forest-deep)]">{ratingValue}</p>
                 <p className="text-xs uppercase tracking-wider text-[var(--muted-foreground)] mt-1">
                   Google Rating
                 </p>
@@ -137,17 +123,19 @@ export default function About() {
             What Our Guests Are Saying
           </h2>
           <div className="flex items-center gap-2">
-            <span className="text-3xl font-bold text-[var(--forest-deep)]">4.7</span>
+            <span className="text-3xl font-bold text-[var(--forest-deep)]">{ratingValue}</span>
             <div className="flex items-center gap-0.5">
               {[1, 2, 3, 4, 5].map((i) => (
                 <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
               ))}
             </div>
-            <span className="text-sm text-[var(--muted-foreground)]">Based on Google Reviews</span>
+            <span className="text-sm text-[var(--muted-foreground)]">
+              {reviews.total > 0 ? `Based on ${reviews.total} Google Reviews` : "Based on Google Reviews"}
+            </span>
           </div>
         </div>
 
-        <ReviewsCardMarquee reviews={reviews} />
+        <ReviewsCardMarquee reviews={reviewCards} />
       </section>
 
       {/* CTA */}

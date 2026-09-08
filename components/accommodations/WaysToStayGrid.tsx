@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { ChevronRight, Caravan } from "lucide-react";
 
-const rvsite = "/images/rvsite.jpg";
-const longTerm = "/images/rv-site-new.jpg";
+const rvsite = "/images/rv-office-row.jpg";
+const longTerm = "/images/rv-lane.jpg";
 
 const cards = [
   {
