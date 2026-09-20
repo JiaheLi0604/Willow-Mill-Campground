@@ -10,14 +10,12 @@ import {
   Mountain,
   Anchor,
   TreePine,
+  Fish,
 } from "lucide-react";
 import type { LucideProps } from "lucide-react";
 import type { ComponentType } from "react";
-import { ComingSoon } from "@/components/ComingSoon";
 
-const SHOW_COMING_SOON = true;
-
-const heroImg = "/images/hero.jpg";
+const heroImg = "/images/park-hero.jpg";
 
 export const metadata: Metadata = {
   title: "What's Nearby — Willow Mill Campground",
@@ -28,24 +26,24 @@ export const metadata: Metadata = {
 const cities = [
   {
     name: "Wisconsin Dells, WI",
-    time: "30 min",
-    distance: "25 mi",
+    time: "35 min",
+    distance: "32 mi",
     slug: "/about/nearby/wisconsin-dells",
     directions:
       "https://www.google.com/maps/dir/Rio,+WI+53960/Wisconsin+Dells,+WI",
   },
   {
     name: "Devil's Lake State Park, WI",
-    time: "1 hr",
-    distance: "40 mi",
+    time: "50 min",
+    distance: "31 mi",
     slug: "/about/nearby/devils-lake",
     directions:
       "https://www.google.com/maps/dir/Rio,+WI+53960/Devil%27s+Lake+State+Park,+Baraboo,+WI",
   },
   {
     name: "Aztalan State Park, WI",
-    time: "45 min",
-    distance: "30 mi",
+    time: "55 min",
+    distance: "37 mi",
     slug: "/about/nearby/aztalan",
     directions:
       "https://www.google.com/maps/dir/Rio,+WI+53960/Aztalan+State+Park,+Lake+Mills,+WI",
@@ -74,16 +72,10 @@ const attractions: Attraction[] = [
   { Icon: Anchor,   name: "Lake Wisconsin",                           time: "30 min drive", mapsUrl: `https://www.google.com/maps/dir/${BASE}/Lake+Wisconsin+Merrimac+WI` },
   { Icon: Mountain, name: "Baraboo Range & Devil's Lake Bluffs",      time: "1 hr drive",   mapsUrl: `https://www.google.com/maps/dir/${BASE}/Devil%27s+Lake+State+Park+Baraboo+WI` },
   { Icon: Bird,     name: "Horicon Marsh Wildlife Area",              time: "45 min drive", mapsUrl: `https://www.google.com/maps/dir/${BASE}/Horicon+Marsh+WI` },
+  { Icon: Fish,     name: "Chandler Park & Park Lake",                 time: "15 min drive", mapsUrl: `https://www.google.com/maps/dir/${BASE}/Chandler+Park+Pardeeville+WI` },
 ];
 
 export default function Nearby() {
-  if (SHOW_COMING_SOON) {
-    return (
-      <Layout>
-        <ComingSoon title="What's Nearby" />
-      </Layout>
-    );
-  }
   return (
     <Layout>
       <PageHero title="What's Nearby" image={heroImg} />
