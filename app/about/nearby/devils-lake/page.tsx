@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
 import { NearbyCityPage } from "@/components/NearbyCityPage";
-import { Layout } from "@/components/Layout";
-import { ComingSoon } from "@/components/ComingSoon";
 
-const SHOW_COMING_SOON = true;
-
-const hero = "/images/pond.jpg";
-const heroImage = "/images/view4.jpg";
-const rockFormations = "/images/view5.jpg";
-const hikingTrails = "/images/park-hero.jpg";
-const beach = "/images/lake.jpg";
+const hero = "/images/devils-lake-hero.jpg";
+const heroImage = "/images/devils-lake-intro.jpg";
+const rockFormations = "/images/devils-lake-doorway.jpg";
+const hikingTrails = "/images/devils-lake-trail.jpg";
+const beach = "/images/devils-lake-beach.jpg";
 
 const dir = (dest: string) => `https://maps.google.com/?q=${encodeURIComponent(dest)}`;
 
@@ -19,13 +15,6 @@ export const metadata: Metadata = {
 };
 
 export default function DevilsLakePage() {
-  if (SHOW_COMING_SOON) {
-    return (
-      <Layout>
-        <ComingSoon title="Devil's Lake State Park" />
-      </Layout>
-    );
-  }
   return (
     <NearbyCityPage
       hero={hero}

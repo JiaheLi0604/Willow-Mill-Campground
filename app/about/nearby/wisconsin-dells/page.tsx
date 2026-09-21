@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
 import { NearbyCityPage } from "@/components/NearbyCityPage";
-import { Layout } from "@/components/Layout";
-import { ComingSoon } from "@/components/ComingSoon";
 
-const SHOW_COMING_SOON = true;
-
-const hero = "/images/lake.jpg";
-const heroImage = "/images/view.jpg";
-const boatTours = "/images/view2.jpg";
-const waterpark = "/images/pool.jpg";
-const lostCanyon = "/images/view3.jpg";
+const hero = "/images/wisconsin-dells-hero.jpg";
+const heroImage = "/images/wisconsin-dells-intro.jpg";
+const boatTours = "/images/wisconsin-dells-boat-tour.jpg";
+const waterpark = "/images/wisconsin-dells-waterpark.jpg";
+const witchesGulch = "/images/wisconsin-dells-canyon.jpg";
 
 const dir = (dest: string) => `https://maps.google.com/?q=${encodeURIComponent(dest)}`;
 
@@ -19,13 +15,6 @@ export const metadata: Metadata = {
 };
 
 export default function WisconsinDellsPage() {
-  if (SHOW_COMING_SOON) {
-    return (
-      <Layout>
-        <ComingSoon title="Wisconsin Dells" />
-      </Layout>
-    );
-  }
   return (
     <NearbyCityPage
       hero={hero}
@@ -48,10 +37,10 @@ export default function WisconsinDellsPage() {
           learnMore: dir("Kalahari Resort, Wisconsin Dells, WI"),
         },
         {
-          img: lostCanyon,
-          name: "Lost Canyon Tours",
-          body: "A horse-drawn carriage ride through narrow rock canyons and passageways carved into the sandstone — a quieter, more scenic way to see the terrain that makes the Dells famous.",
-          learnMore: dir("Lost Canyon Tours, Wisconsin Dells, WI"),
+          img: witchesGulch,
+          name: "Witches Gulch",
+          body: "A narrow, moss-covered sandstone canyon reached by a short boat ride followed by a wooden boardwalk trail. It's one of the most scenic and photographed spots in the Dells — cool, shaded, and a great stop for anyone who wants to see the gorge scenery up close on foot.",
+          learnMore: dir("Witches Gulch, Wisconsin Dells, WI"),
         },
       ]}
       directionsTitle="A short drive to the Dells"
