@@ -5,28 +5,28 @@ import { Layout } from "@/components/Layout";
 import { ComingSoon } from "@/components/ComingSoon";
 import { Phone, X, ChevronLeft, ChevronRight } from "lucide-react";
 
-const SHOW_COMING_SOON = true;
+const SHOW_COMING_SOON = false;
 
 const heroImg = "/images/view5.jpg";
 const BOOK_URL = "https://www.campspot.com/book/willow-mill-campground";
 
 const IMAGES = [
-  { src: "/images/gallery/park_campers_full.jpg", alt: "Campers at Willow Mill Campground" },
-  { src: "/images/rv4.jpg", alt: "RV site at Willow Mill" },
-  { src: "/images/rv3.jpg", alt: "RV site at Willow Mill" },
-  { src: "/images/gallery/park_office_full.jpg", alt: "Park office" },
-  { src: "/images/dog.jpg", alt: "Pet friendly at Willow Mill" },
-  { src: "/images/spot.jpg", alt: "RV spot at Willow Mill" },
-  { src: "/images/gallery/horseshoes_full.jpg", alt: "Horseshoes" },
-  { src: "/images/rv.jpg", alt: "RV site at Willow Mill" },
-  { src: "/images/site.jpg", alt: "RV site at Willow Mill" },
-  { src: "/images/view.jpg", alt: "Pond view at Willow Mill" },
-  { src: "/images/front.jpg", alt: "Willow Mill entrance sign" },
-  { src: "/images/rvsite.jpg", alt: "RV site" },
-  { src: "/images/view3.jpg", alt: "Park view at Willow Mill" },
-  { src: "/images/rv-site-new.jpg", alt: "RV site at Willow Mill" },
-  { src: "/images/bathroom.jpg", alt: "Bathrooms & Showers at Willow Mill" },
-  { src: "/images/park-hero.jpg", alt: "Park view" },
+  { src: "/images/gallery/lake-dock-view.jpg", alt: "Lake view from the dock at Willow Mill" },
+  { src: "/images/gallery/rv-park-wide.jpg", alt: "RV sites at Willow Mill Campground" },
+  { src: "/images/gallery/playground-lakeside.jpg", alt: "Lakeside playground at Willow Mill" },
+  { src: "/images/gallery/lake-treeline.jpg", alt: "Lake and treeline at Willow Mill" },
+  { src: "/images/gallery/rv-row.jpg", alt: "RV row under the willow trees" },
+  { src: "/images/gallery/lake-campsites.jpg", alt: "Campsites along the lake at Willow Mill" },
+  { src: "/images/gallery/swimming-pool-2.jpg", alt: "Swimming pool at Willow Mill" },
+  { src: "/images/gallery/office-exterior.jpg", alt: "Willow Mill office exterior" },
+  { src: "/images/gallery/marsh-wildflowers.jpg", alt: "Marsh and wildflowers near Willow Mill" },
+  { src: "/images/gallery/office-welcome.jpg", alt: "Welcome to Willow Mill office" },
+  { src: "/images/gallery/lake-dock-view-2.jpg", alt: "Lake view from the boat launch at Willow Mill" },
+  { src: "/images/gallery/marsh-reflections.jpg", alt: "Marsh reflections near Willow Mill" },
+  { src: "/images/gallery/rental-cabin.jpg", alt: "Rental cabin at Willow Mill" },
+  { src: "/images/gallery/forest-trail.jpg", alt: "Forest trail at Willow Mill" },
+  { src: "/images/gallery/lake-playground-evening.jpg", alt: "Evening light over the lake and playground" },
+  { src: "/images/gallery/lake-willow-view.jpg", alt: "Willow trees along the lake at Willow Mill" },
 ];
 
 export default function Gallery() {
