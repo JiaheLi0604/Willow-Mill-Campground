@@ -17,7 +17,7 @@ const IMAGES = [
   { src: "/images/gallery/lake-treeline.jpg", alt: "Lake and treeline at Willow Mill" },
   { src: "/images/gallery/rv-row.jpg", alt: "RV row under the willow trees" },
   { src: "/images/gallery/lake-campsites.jpg", alt: "Campsites along the lake at Willow Mill" },
-  { src: "/images/gallery/swimming-pool-2.jpg", alt: "Swimming pool at Willow Mill" },
+  { src: "/images/gallery/swimming-pool-2.jpg", alt: "Campers relaxing together at Willow Mill" },
   { src: "/images/gallery/office-exterior.jpg", alt: "Willow Mill office exterior" },
   { src: "/images/gallery/marsh-wildflowers.jpg", alt: "Marsh and wildflowers near Willow Mill" },
   { src: "/images/gallery/office-welcome.jpg", alt: "Welcome to Willow Mill office" },
