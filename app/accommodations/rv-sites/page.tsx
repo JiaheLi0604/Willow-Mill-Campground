@@ -54,18 +54,21 @@ const pricingTiers = [
     period: "Daily / Weekly",
     price: "TBD",
     note: "30/50 amp electric + water hookup",
+    image: "/images/rv-lane.jpg",
   },
   {
     title: "Full Hookup (w/ Sewer)",
     period: "Daily / Weekly",
     price: "TBD",
     note: "30/50 amp electric + water + sewer hookup",
+    image: "/images/rv3.jpg",
   },
   {
     title: "Long Term / Seasonal",
     period: "Monthly / Seasonal",
     price: "TBD",
     note: "Claim your spot for the month or the whole season",
+    image: "/images/rv4.jpg",
   },
 ];
 
@@ -124,17 +127,24 @@ export default function RvSites() {
             {pricingTiers.map((tier) => (
               <div
                 key={tier.title}
-                className="bg-white border border-[var(--border)] rounded-xl flex flex-col gap-3"
-                style={{ padding: "32px" }}
+                className="bg-white border border-[var(--border)] rounded-xl flex flex-col overflow-hidden"
               >
-                <p className="text-xl font-light text-[var(--forest-deep)]">{tier.title}</p>
-                <p className="text-[0.6875rem] font-semibold uppercase tracking-wider text-[var(--muted-foreground)]">
-                  {tier.period}
-                </p>
-                <p className="font-bold text-[var(--forest-deep)] leading-none" style={{ fontSize: "1.875rem" }}>
-                  {tier.price}
-                </p>
-                <p className="text-sm text-[var(--muted-foreground)]">{tier.note}</p>
+                <img
+                  src={tier.image}
+                  alt={tier.title}
+                  className="w-full object-cover aspect-[4/3]"
+                  loading="lazy"
+                />
+                <div className="flex flex-col gap-3" style={{ padding: "32px" }}>
+                  <p className="text-xl font-light text-[var(--forest-deep)]">{tier.title}</p>
+                  <p className="text-[0.6875rem] font-semibold uppercase tracking-wider text-[var(--muted-foreground)]">
+                    {tier.period}
+                  </p>
+                  <p className="font-bold text-[var(--forest-deep)] leading-none" style={{ fontSize: "1.875rem" }}>
+                    {tier.price}
+                  </p>
+                  <p className="text-sm text-[var(--muted-foreground)]">{tier.note}</p>
+                </div>
               </div>
             ))}
           </div>
