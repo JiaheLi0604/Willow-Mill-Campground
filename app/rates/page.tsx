@@ -142,6 +142,30 @@ export default function Rates() {
                 Book Now →
               </a>
             </div>
+
+            <div
+              className="bg-white border border-[#ddd7c9] rounded-xl flex flex-col gap-4"
+              style={{ padding: "35px" }}
+            >
+              <p className="text-xl font-light text-[var(--forest-deep)]">
+                Visitor Swimming Pass
+              </p>
+              <div>
+                <p
+                  className="font-bold text-[var(--forest-deep)] leading-none"
+                  style={{ fontSize: "1.875rem" }}
+                >
+                  $6
+                  <span className="text-sm font-normal">/day per person</span>
+                </p>
+                <p
+                  className="text-[var(--muted-foreground)] mt-1"
+                  style={{ fontSize: "0.9375rem" }}
+                >
+                  Maximum $20 per family per day
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
