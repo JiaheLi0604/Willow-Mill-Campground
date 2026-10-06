@@ -129,7 +129,7 @@ export default function Rates() {
                   className="text-[var(--muted-foreground)] mt-1"
                   style={{ fontSize: "0.9375rem" }}
                 >
-                  $322/week
+                  $330/week
                 </p>
               </div>
               <a
@@ -179,14 +179,14 @@ export default function Rates() {
                   className="font-bold text-[var(--forest-deep)] leading-none"
                   style={{ fontSize: "1.875rem" }}
                 >
-                  $700
+                  $840
                   <span className="text-sm font-normal">/month</span>
                 </p>
                 <p
                   className="text-[var(--muted-foreground)] mt-1"
                   style={{ fontSize: "0.9375rem" }}
                 >
-                  $3,150/season
+                  Starting at $3,120/season
                 </p>
               </div>
               <a
