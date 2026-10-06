@@ -9,10 +9,7 @@ const logo = "/images/logo.png";
 
 const nav = [
   { label: "Home", to: "/" as const },
-  { label: "Ways to Stay", to: "/accommodations" as const, noLink: true, children: [
-    { label: "Full Hookup RV Sites", to: "/accommodations/rv-sites" },
-    { label: "Long Term RV Sites", to: "/about/long-term-rv" },
-  ]},
+  { label: "Ways to Stay", to: "/accommodations/rv-sites" as const },
   { label: "About", to: "/about" as const, children: [
     { label: "About Us", to: "/about" },
     { label: "Nearby", to: "/about/nearby" },

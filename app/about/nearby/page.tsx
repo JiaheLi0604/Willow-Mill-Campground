@@ -52,8 +52,8 @@ const cities = [
 
 const exploreMore = [
   {
-    name: "Long Term RV Sites, Rio, WI",
-    slug: "/about/long-term-rv",
+    name: "RV Sites, Rio, WI",
+    slug: "/accommodations/rv-sites",
   },
 ];
 

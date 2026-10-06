@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Star, MapPin, Phone, Car, CalendarDays, ArrowRight } from "lucide-react";
+import { Star, MapPin, Phone, Car, ArrowRight } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { getGoogleReviews } from "@/lib/google-reviews";
 import { ReviewMarquee } from "@/components/home/ReviewMarquee";
@@ -12,7 +12,6 @@ const pool = "/images/pool-real.jpg";
 const playground = "/images/playground.jpg";
 const orchard = "/images/dog-park-beach.png";
 const parkHero = "/images/park-hero.jpg";
-const longTermHero = "/images/rv-lane.jpg";
 const rvsite = "/images/rv-office-row.jpg";
 const gameroom = "/images/gameroom-patio.png";
 const minigolf = "/images/minigolf-lakeside.png";
@@ -138,40 +137,23 @@ export default async function Home() {
         <div className="container-narrow">
           <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted-foreground)] mb-3">Ways to Stay</p>
           <h2 className="font-sans text-3xl md:text-4xl font-medium text-[var(--forest-deep)] mb-12">Find Your Perfect Stay</h2>
-          <div className="grid gap-8 md:grid-cols-2">
-            {[
-              {
-                img: rvsite,
-                icon: Car,
-                title: "RV Sites",
-                text: "Our RV sites come with water and electric connections — select sites also include sewer. Plenty of large, shaded spots to choose from, and our oversized sites handle big rigs without a problem.",
-                to: "/accommodations/rv-sites" as const,
-              },
-              {
-                img: longTermHero,
-                icon: CalendarDays,
-                title: "Long Term RV Sites",
-                text: "Willow Mill has been a seasonal home for families since 1968, and our long term sites reflect that. Claim your spot for the season and spend your summers at Willow Mill in Columbia County.",
-                to: "/about/long-term-rv" as const,
-              },
-            ].map((c) => (
-              <article key={c.title} className="bg-white rounded-xl shadow-sm overflow-hidden">
-                <div className="relative aspect-[16/10]">
-                  <img src={c.img} alt={c.title} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
-                  <div className="absolute -bottom-5 left-5 h-11 w-11 rounded-full bg-white shadow-md flex items-center justify-center">
-                    <c.icon className="h-5 w-5 text-[var(--forest-deep)]" />
-                  </div>
-                </div>
-                <div className="p-6 pt-8">
-                  <h3 className="font-sans text-xl font-medium text-[var(--forest-deep)] mb-3">{c.title}</h3>
-                  <p className="text-sm text-[var(--muted-foreground)] leading-relaxed mb-5">{c.text}</p>
-                  <Link href={c.to} className="inline-flex items-center gap-1 text-sm font-medium text-[var(--forest-deep)] hover:text-[var(--forest)]">
-                    Details <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
+          <article className="bg-white rounded-xl shadow-sm overflow-hidden max-w-2xl">
+            <div className="relative aspect-[16/9]">
+              <img src={rvsite} alt="RV Sites at Willow Mill" className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+              <div className="absolute -bottom-5 left-5 h-11 w-11 rounded-full bg-white shadow-md flex items-center justify-center">
+                <Car className="h-5 w-5 text-[var(--forest-deep)]" />
+              </div>
+            </div>
+            <div className="p-6 pt-8">
+              <h3 className="font-sans text-xl font-medium text-[var(--forest-deep)] mb-3">RV Sites</h3>
+              <p className="text-sm text-[var(--muted-foreground)] leading-relaxed mb-5">
+                Our RV sites come with water and electric connections — select sites also include sewer. Plenty of large, shaded spots to choose from, with options for a quick weekend visit or a full seasonal stay.
+              </p>
+              <Link href="/accommodations/rv-sites" className="inline-flex items-center gap-1 text-sm font-medium text-[var(--forest-deep)] hover:text-[var(--forest)]">
+                Details <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </article>
         </div>
       </section>
 

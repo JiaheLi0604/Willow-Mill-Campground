@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ChevronRight, Caravan } from "lucide-react";
 
 const rvsite = "/images/rv-office-row.jpg";
-const longTerm = "/images/rv-lane.jpg";
 
 const cards = [
   {
@@ -10,21 +9,13 @@ const cards = [
     href: "/accommodations/rv-sites",
     image: rvsite,
     description:
-      "Our spacious, shaded sites offer full hookups with water, electric, and sewer. Pull-through and back-in sites available, with picnic tables and fire rings included.",
-  },
-  {
-    title: "Long Term RV Sites",
-    href: "/about/long-term-rv",
-    image: longTerm,
-    description:
-      "Willow Mill has been a seasonal home for families since 1968. Claim your spot for the season and spend your summers in the heart of Wisconsin's lake country.",
+      "Our spacious, shaded sites offer water and electric hookups, with sewer on select sites. Stop by for a weekend or claim your spot for the season — pull-through and back-in sites available, with picnic tables and fire rings included.",
   },
 ];
 
 /**
- * "Ways to Stay" cross-link section — two-card grid matching Willow
- * Mill's layout: image on top, title + description + Details link below.
- * Always shows both cards (no exclusion).
+ * "Ways to Stay" cross-link section — matches Willow Mill's layout:
+ * image on top, title + description + Details link below.
  */
 export function WaysToStayGrid({ exclude }: { exclude?: string }) {
   void exclude; // kept for API compatibility but no longer used
@@ -36,7 +27,7 @@ export function WaysToStayGrid({ exclude }: { exclude?: string }) {
           Ways to Stay
         </p>
         <h2 className="text-4xl mb-10 text-center">Find Your Perfect Stay</h2>
-        <div className="grid gap-6 sm:grid-cols-2 max-w-4xl mx-auto">
+        <div className="grid gap-6 max-w-md mx-auto">
           {cards.map((c) => (
             <div key={c.href} className="rounded-xl overflow-hidden border border-[var(--border)] bg-white shadow-sm">
               <div className="relative overflow-hidden aspect-[16/9]">

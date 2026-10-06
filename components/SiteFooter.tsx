@@ -9,7 +9,6 @@ const PHONE = "(920) 992-1212";
 
 const footerLinks = [
   { label: "RV Sites", href: "/accommodations/rv-sites" },
-  { label: "Long Term RV Sites", href: "/about/long-term-rv" },
   { label: "About Us", href: "/about" },
   { label: "Amenities", href: "/amenities" },
   { label: "Rates", href: "/rates" },
