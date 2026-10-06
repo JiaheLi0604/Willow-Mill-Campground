@@ -7,7 +7,7 @@ import { CallBanner } from "@/components/accommodations/CallBanner";
 import { GalleryLightbox } from "@/components/home/GalleryLightbox";
 import { ComingSoon } from "@/components/ComingSoon";
 
-const SHOW_COMING_SOON = true;
+const SHOW_COMING_SOON = false;
 
 const heroImg = "/images/view4.jpg";
 const rvsite = "/images/rvsite.jpg";
