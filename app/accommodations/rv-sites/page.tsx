@@ -18,7 +18,6 @@ const sunset = "/images/rv3.jpg";
 const pool = "/images/spot2.jpg";
 const playground = "/images/spot3.jpg";
 const badminton = "/images/gallery/badminton_full.jpg";
-const horseshoes = "/images/gallery/horseshoes_full.jpg";
 
 const BOOK_URL = "https://www.campspot.com/book/willow-mill-campground";
 
@@ -46,7 +45,6 @@ const gallery = [
   { src: pool, alt: "Swimming pool at Willow Mill" },
   { src: playground, alt: "Playground at Willow Mill" },
   { src: badminton, alt: "Badminton court at Willow Mill" },
-  { src: horseshoes, alt: "Horseshoe pit at Willow Mill" },
 ];
 
 // TODO: replace placeholder pricing with real tier pricing once confirmed.
@@ -121,7 +119,7 @@ export default function RvSites() {
       {/* ── Pricing Tiers ──────────────────────────────────────────────── */}
       <section className="pb-20 bg-[var(--cream)] pt-16">
         <div className="container-narrow">
-          <h2 className="text-4xl mb-10 text-center">Site & Pricing Options</h2>
+          <h2 className="text-4xl mb-10 text-center">Site <span className="font-sans">&</span> Pricing Options</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {pricingTiers.map((tier) => (
               <div
