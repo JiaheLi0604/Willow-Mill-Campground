@@ -149,7 +149,7 @@ export default function Contact() {
             </div>
             <div className="text-[var(--forest-deep)]" style={{ fontSize: "16px" }}>
               <p className="font-semibold">Mon–Tue: Closed</p>
-              <p className="font-semibold">Wed–Thu: 10am–7pm</p>
+              <p className="font-semibold">Wed–Thu: 10am–5pm</p>
               <p className="font-semibold">Fri–Sun: 8am–8pm</p>
             </div>
           </div>
